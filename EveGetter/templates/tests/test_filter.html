@@ -1,0 +1,72 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" type="text/css" href="{% static 'css/normalize.css' %}"> -->
+    <!-- <link rel="stylesheet" type="text/css" href="{% static 'css/popup.css' %}"> -->
+    <!-- <script src="https://kit.fontawesome.com/20e77e6026.js" crossorigin="anonymous"></script> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
+    <!-- <link rel="stylesheet" type="text/css" href="{% static 'css/newcss.css' %}"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <select name="" id="event_types"
+          url="{% url 'events:get_event_type' %}"
+        ></select>       
+    </div>
+
+
+
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <script
+        src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+          crossorigin="anonymous"></script>
+        <script
+          src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"
+         integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30="
+        crossorigin="anonymous"></script>
+  <script>
+      $( function(){
+          $("#id_event_date").datepicker({ 
+              dateFormat: 'dd-mm-yy', maxDate: 0,
+        controlType: 'select'});
+        // .attrs("autocomplete", "off");
+        
+      })    
+  </script>
+  <!-- <script>
+      $('#id_event_date').datepicker({
+       //comment the beforeShow handler if you want to see the ugly overlay
+       beforeShow: function() {
+           setTimeout(function(){
+               $('#id_event_date').css('z-index', 1000);
+           }, 0);
+       }
+});
+  </script> -->
+  <script type="text/javascript" src={% static "js/script.js" %}></script>
+  <script type="text/javascript" src={% static "js/popup.js" %}></script>
+  <script type="text/javascript" src={% static "js/testaj.js" %}></script>
+  <script type="text/javascript">
+    // A CSRF token is required when making post requests in Django
+    // To be used for making AJAX requests in script.js
+    window.CSRF_TOKEN = "{{ csrf_token }}";
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+</body>
+</html>
+   

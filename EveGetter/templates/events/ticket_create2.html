@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Создать билет {% endblock %}
+{% block breadcrumbs %}
+    <li><a href="{% url 'acclook' %}" class="bread_active">{{request.user.first_name}} {{request.user.second_name}}</a></li>
+    <li><a href="{% url 'myevents' %}" class="bread_active">Мои мероприятия</a></li>
+    <li><a href="{% url 'event-creator-detail' event_id.id %}" class="bread_active">{{event_id.name}}</a></li>
+    <li><a href="" class="bread_current">Создать билет</a></li>
+{% endblock %}
+{% block content %}
+<form action="" method="POST" class="mt_5">
+    {% csrf_token %}
+    <div class="event_create_wrapper2">
+        <h1 class="h1_ma">Создать билет</h1>
+        <div class="j_center flex_column b_inp">
+            <div class="j_center flex_column">
+                <label for="">
+                    Название
+                </label>
+                {{form.ticket_name}}
+            </div>
+            <div class="j_center flex_column">
+                <label for="">
+                    Количество
+                </label>
+                {{form.amount}}
+            </div>
+            <div class="j_center flex_column">
+                <label for="">
+                    Цена
+                </label>
+                {{form.price}}
+            </div>
+            <div class="j_center flex_column">
+                <label for="">
+                    Описание
+                </label>
+                {{form.description}}
+            </div>
+        </div>
+        <div class="create_ticket_btn mt_5">
+            <button>Отмена</button>
+            <button type="submit">Сохранить</button>
+        </div>
+    </div>    
+</form>
+{% endblock%}

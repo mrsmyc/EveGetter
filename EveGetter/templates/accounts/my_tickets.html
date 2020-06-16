@@ -1,0 +1,119 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Мои билеты{% endblock %}
+{% block breadcrumbs %}
+  <li><a href="{% url 'acclook' %}" class="bread_active">{{request.user.first_name}} {{request.user.second_name}}</a></li>
+  <li><a href="" class="bread_current">Билеты</a></li>
+{% endblock %}
+{% block content %}
+    <section class="section_filter">
+      <div class="main_filter_my_tickets ">
+        <div class="event_type_div event_type_div_my_tickets">
+          <select class="event_type_filter"  >
+            <option selected disabled hidden>Статус</option>
+            <option>Предстоит</option>
+            <option>Завершено</option>
+          </select>
+        </div>
+        <div class="date_picker_div date_picker_div_my_tickets">
+          <input class="date_picker date_picker_my_tickets" type="text" name="daterange" value="01/01/2018 - 01/15/2018" />
+        </div>
+        <div class = "TicketsSearch">
+          <form class="TicketsForm">
+            <input class="Ticketsinput" type="text" placeholder="Название мероприятия">
+            <button class="searchbutton searchbutton_my_tickets" type="submit"></button>
+          <form>
+        </div>
+      </div>
+    </section>
+    <div class="my_tickets_cards">
+      <h2>Мои билеты</h2>
+      {% if user_tickets %}
+      <div class="my_tickets_cards_top">
+        {% for a in user_tickets %}
+        <div class="div_main_card10 div_my_tickets_cards">
+          <div class="main_card_img">
+            <div class="card_img">
+              {% with a.ticket_idpk.event.images_set.all.0 as ph1%}
+                <img src="{{ph1.image.url}}" alt="">
+              {% endwith %}
+            </div>
+            <div class="main_card_img_info">
+              <div class="">
+                <a href="#">{{a.ticket_idpk.price}}₽</a>
+              </div>
+              <div class="">
+                <a href="#">{{a.ticket_idpk.ticket_name}}</a>
+              </div>
+              <div class="">
+                <a href="#">{{a.ticket_idpk.event.date}}</a>
+              </div>
+            </div>
+          </div>
+            <div class="main_card_name">
+              <a class="name_links" href="{% url 'event-detail' a.ticket_idpk.event.id %}">{{a.ticket_idpk.event.name}}</a>
+            </div>
+            <div class="main_card_date_place">
+              <a class="main_card_date_place_links" href="#">{{a.ticket_idpk.event.date}}, {{a.ticket_idpk.event.city}}</a>
+            </div>
+            <div class="count_tickets">
+              <a href="">Количество: {{a.count}}</a>
+            </div>
+            <div class="return_ticket_div">
+              <a href="{% url 'ticket-return' a.id %}">Вернуть билет</a>
+            </div>
+        </div>
+      {% endfor %}
+      </div>
+      {% else %}
+      <h2>У вас еще нет ни одного билета</h2>
+      {% endif %}
+      <div class="reviews_pagination_all">
+        <div class="reviews_pagination_creator">
+            <nav id="pagination">
+                <ul class="pagination justify-content-center">
+                    {% if user_tickets.has_previous %}
+                        <li class="page-item">
+                            <a href="{{ request.path }}?page={{ user_tickets.previous_page_number }}" class="page-link">&laquo;</a>
+                        </li>
+                    {% else %}
+                        <li class="page-item disabled">
+                            <a href="#" class="page-link" tabindex="-1" aria-disabled="true">&laquo;</a>
+                        </li>
+                    {% endif %}
+                    {% if user_tickets.paginator.count > user_tickets.paginator.page_range%}
+                    <li class="page-item disabled">
+                      <!-- <a href="#" class="page-link disabled" aria-disabled="true">1</a> -->
+                    </li>            
+                    {% else %}
+                    {% for i in user_tickets.paginator.page_range %}
+                        {% if user_tickets.number == 1 %}
+                            <li class="page-item ">
+                                <a href="{{ request.path }}?page={{ i }}" class="page-link">{{ i }}</a>
+                            </li>
+                        {% else %}
+                        <li class="page-item">
+                            <a href="{{ request.path }}?page={{ i }}" class="page-link">{{ i }}</a>
+                        </li>
+                        {% endif %}
+                    {% endfor %}
+                    {% if user_tickets.has_next %}
+                        <li class="page-item">
+                            <a href="{{ request.path }}?page={{ user_tickets.next_page_number }}" class="page-link">&raquo;</a>
+                        </li>
+                    {% else %}
+                        <li class="page-item disabled">
+                            <a href="#" class="page-link disabled" tabindex="-1" aria-disabled="true">&raquo;</a>
+                        </li>
+                    {% endif %}
+                    {% endif %}            
+                </ul>
+            </nav>
+        </div>
+    </div>
+    </div>
+    <div class="banner_create_event">
+      <a href="{% url 'createEvent' %}">Создайте свое мероприятие вместе с нами</a>
+    </div>
+
+    {% endblock %}

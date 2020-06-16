@@ -1,0 +1,185 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Создать мероприятие {% endblock %}
+{% block content %}
+
+        <nav>
+            <div class="breadcrumbs">
+              <ul class="breadcrumb">
+                <li><a href="#" class="bread_active">Главная</a></li>
+                <li><a href="#"class="bread_active">Мои мероприятия</a></li>
+                <li><a href="#"class="bread_current">Создать мероприятие</a></li>
+              </ul>
+            </div>
+        </nav>
+       <form method="POST" enctype="multipart/form-data" action="">
+        {% csrf_token %}
+        <div class="create_main_label">
+          <h1 class="h1style">Создайте свое мероприятие</h1>
+          <div class="div_add_name">
+            <div class="">
+              <label class="label_font">Название</label>
+            </div>
+            <div class="">
+              <!-- {{form.event_creator}} -->
+              {{form.name}}
+              <!-- <input type="text" maxlength="50" required=""/> -->
+            </div>
+          </div>
+          <div class="div_add_description">
+            <div class="">
+              <label class="label_font">Описание</label>
+            </div>
+            {{form.description}}
+          </div>
+          <div class="div_add_description">
+            <div class="">
+              <label class="label_font">Краткое описание</label>
+            </div>
+            {{form.short_description}}
+          </div>
+          <div class="div_add_comboes">
+            <div class="div_add_type">
+              <label class="label_font" for="">Выберите тип мероприятия</label>
+              <div class="div_add_comboes_1">
+                {{form.event_type}}
+              </div>
+            </div>
+            <div class="div_add_date">
+              <label class="label_font" for="">Выберите дату</label>
+              <div class="div_add_comboes_2">
+                {{form.date}}
+              </div>
+            </div>
+            <div>
+              <label for="">Выберите время</label>
+              <div>
+                {{form.time}}
+              </div>
+            </div>
+            <div>
+              <label for="">Укажите продолжительность</label>
+              <div>
+                {{form.duration}}
+              </div>
+            </div>
+          </div>
+          <div class="div_add_additional">
+            <div class="div_add_additional_label">
+              <label class="label_font" class="" for="">Выберите дополнительные условия</label>
+            </div>
+            <div class="div_add_additional_form">
+              <div class="div_add_additional_form_lvl_1">
+                <div class="div_add_additional_form_lvl_1_2">
+                  {{form.if_dresscode}}
+                </div>
+                <div class="div_add_additional_form_lvl_1_1">
+                  <div >
+                    <label class="label_font"  for="check1">Дресс-код</label>
+                  </div>
+                </div>
+                <div class="div_add_additional_form_lvl_1_3">
+                  {{form.dresscodevalue}}
+                </div>
+              </div>
+              <div class="div_add_additional_form_lvl_2">
+                <div class="div_add_additional_form_lvl_2_2">
+                  {{form.if_age}}
+                </div>
+                <div class="div_add_additional_form_lvl_2_1">
+                  <div class="">
+                    <label class="label_font age_class" for="check2">Возрастные ограничения</label>
+                  </div>
+                </div>
+                <div class="div_add_additional_form_lvl_2_3">
+                  <div class="div_add_additional_form_lvl_2_3_input_1">
+                    <span>От:</span>{{form.age_start}}
+                  </div>
+                  <div class="div_add_additional_form_lvl_2_3_input_2">
+                    <span>До:</span>{{form.age_end}}
+                  </div>
+                </div>
+              </div>
+              <div class="div_add_additional_form_lvl_3">
+                <div class="div_add_additional_form_lvl_3_2">
+                  {{form.if_gender}}
+                </div>
+                <div class="div_add_additional_form_lvl_3_1">
+                  <div class="">
+                    <label class="label_font gender_class" for="check3">Гендер</label>
+                  </div>
+                </div>
+                <div class="div_add_additional_form_lvl_3_3">
+                  {{form.sex}}
+                </div>
+              </div>
+              <div class="div_add_additional_form_lvl_4">
+                <div class="div_add_additional_form_lvl_4_2">
+                  {{form.insidespendings}}
+                </div>
+                <div class="div_add_additional_form_lvl_4_1">
+                  <div class="">
+                    <label class="label_font cost_inside" for="check4">Внутренние траты</label>
+                  </div>
+                </div>
+                <div class="div_add_additional_form_lvl_4_3">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <label for="">Укажите страну</label>
+            <div>
+              {{form.country}}
+            </div>
+          </div>
+          <div>
+            <label for="">Укажите город</label>
+            <div>
+              {{form.city}}
+            </div>
+          </div>
+          <div class="add_adress">
+            <div class="">
+              <label class="label_font" for="">Укажите адрес</label>
+            </div>
+            {{form.event_adress}}
+            <div class="">
+              <iframe class="map_ret" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d863.0726357653297!2d104.28338714524622!3d52.277195608002344!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5da83b4d9282a059%3A0xc21a2edf229ce25b!2z0JTQoSDQotGA0YPQtA!5e0!3m2!1sru!2sru!4v1583054665617!5m2!1sru!2sru" width="1200" height="600" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+            </div>
+          </div>
+            
+          <div class="add_photo">
+            <div class="add_photo_1">
+              <label class="label_font" for="">Добавьте фотографии</label>
+            </div>
+            <div class="add_photo_s">
+              <div class="example-1">
+                <div class="form-group">
+                  <label class="label">
+                    <i class="far fa-images"></i>
+                    <span class="title">Добавить файл</span>
+                    <input type="file">
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+          {{formset.as_p}}
+          <div class="add_deposite">
+            <div class="add_deposite_1">
+              <label class="label_font" for="">Внести депозит</label>
+            </div>
+            <p>Вам необходимо внести депозит в размере 10 000 &#8381;. После успешно проведенного мероприятия мы вернем вам депозит. Также вы можете внести депозит позже.</p>
+          </div>
+          <div class="event_lookup_buttons_bottom">
+            <div class="event_lookup_btn_buy_bottom">
+            <a  href="{% url 'myevents' %}">Отменить</a>
+            </div>
+            <div class="event_lookup_btn_gift_bottom">
+              <button type="submit">Создать</button>
+            </div>
+          </div>
+        </div>  
+       </form>
+        {% endblock %}

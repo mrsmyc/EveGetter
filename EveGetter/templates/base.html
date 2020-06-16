@@ -1,0 +1,149 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/normalize.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/popup.css' %}">
+    <script src="https://kit.fontawesome.com/20e77e6026.js" crossorigin="anonymous"></script>
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css"> -->
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="{% static 'css/chosen.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/newcss.css' %}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script type="text/javascript" src={% static "js/jQuery.js" %}></script>
+
+    <title>{% block title %}EveGetter{% endblock %}</title>
+</head>
+<body>
+<section class="section_nav">
+    <header class= "Header">
+        <div class="Header_inner Header_inner_shadow">
+        <div class="HeaderLogo">
+            <a class="LogoLink" href="{% url 'index' %}">EveGetter</a>
+        </div>
+        <div class = "citychenger" >
+            <select class="livesearch" >
+                <option>Иркутск</option>
+                <option>Москва</option>
+                <option>Ангарск</option>
+                <option>Санкт-Петербург</option>
+            </select>
+        </div>
+        <div class = "HeaderSearch">
+            <form class="HeaderForm" method="GET" action="{% url 'allevents' %}">
+            <input class="searchinput" type="text" placeholder="Cобытия" name="search">
+            <button class="searchbutton" type="submit"></button>
+            </form>
+        </div>
+        <div class="HeaderNavigation">
+            <div class="Events">
+            <a href="{% url 'allevents' %}" class="EventsLink">Все события</a>
+            </div>
+            <div class="Support">
+            <a href="support.html" class="SupportLink">Поддержка</a>
+            </div>
+            {% if request.user.is_authenticated %}
+            <div class="EnterUser">
+                <a href="{% url 'acclook' %}" class="UserLogo"><i class="far fa-user"></i></a>
+            </div>
+            <!-- <a href="{% url 'logout' %}" class="EnterLink">logout</a> -->
+            {% else %}
+            <div class="Enter">
+            <a href="{% url 'login' %}" class="EnterLink">Войти</a>
+            {% endif %}
+        </div>
+        </div>
+        </div>
+
+       
+    </header>
+    <div class="">
+        <header class="Header_mobile" id="main-header">
+        <div class="container">
+            <h1 id="logo"><a href="newindex.html">EveGetter</a></h1>
+            <input type="checkbox" id="nav-toggle" class="nav-toggle"><!-- Using the different states of the checkbox as an activator for the mobile menu - checked and not checked -->
+            <nav id="menu">
+                <ul>
+                    <li class="li1"><a href="#"><input class="searchinput" type="text" placeholder="Артисты, события ...">
+                    <button class="searchbutton" type="submit"></button></a></li>
+                    <li><a href="#">Иркутск</a></li>
+                    <li><a href="#">Все события</a></li>
+                    <li><a href="#">Поддежрка</a></li>
+                    <li><a href="#">Войти</a></li>
+                    <!-- <li><a href="#">Contact</a></li> -->
+                </ul>
+            </nav>
+            <label for="nav-toggle" class="nav-toggle-label">
+                <span></span>
+            </label>
+        </div>
+    </header>
+    </div>
+    </section>
+    <main>
+        <div class="main_container">
+          <section class="bread_section">
+            <div class="breadcrumbs">
+              <ul class="breadcrumb">
+              <li><a href="{% url 'index' %}" class="bread_active">Главная</a></li>
+              {% block breadcrumbs %}
+                
+                {% endblock %}              
+              </ul>
+          </div>
+          </section>
+            {% block content %}
+            <!--CONTENT-->
+
+            {% endblock %}
+        </div>
+    </main>
+    <footer class="ffooter">        
+        <div class="Footer">
+          <div class="footer_leftside">
+            <div class="footer_leftside_Logo">
+              <a class="LogoLink" href="newindex.html">EveGetter</a>
+            </div>
+          </div>
+          <div class="footer_rightside">
+            <div class="footer_middleside_nav">
+              <a href="#">О пректе</a>
+              <a href="contacts.html">Контакты</a>
+              <a href="event_lookup.html">Подарить билет</a>
+              <a href="support.html">Организовать мероприятие</a>
+            </div>
+            <div class="footer_media_links">
+              <a href="#" class="links_vk links"><i class="fab fa-vk"></i></a>
+              <a href="#" class="links_facebook links"><i class="fab fa-facebook"></i></a>
+              <a href="#" class="links_instagram links"><i class="fab fa-instagram"></i></a>
+              <a href="#" class="links_twitter links"><i class="fab fa-twitter"></i></a>
+            </div>
+          </div>
+        </div>
+        </footer>
+        <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> -->
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script> -->
+        <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> -->
+        <!-- <script
+        src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+          crossorigin="anonymous"></script> -->
+        <!-- <script
+          src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"
+         integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30="
+        crossorigin="anonymous"></script> -->
+  <!-- <script type="text/javascript" src={% static "js/jQuery.js" %}></script> -->
+  <script type="text/javascript" src={% static "js/script.js" %}></script>
+  <script type="text/javascript" src={% static "js/popup.js" %}></script>
+  <script type="text/javascript">
+    window.CSRF_TOKEN = "{{ csrf_token }}";
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  <script src={% static "js/chosen.jquery.js" %}></script>
+  {% block js %}
+  {% endblock %}
+
+</body>
+</html>

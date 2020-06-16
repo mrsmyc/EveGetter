@@ -1,0 +1,4699 @@
+ body {
+  margin: 0;
+}
+a {
+  text-decoration: none;
+}
+textarea:focus,select:focus, input:focus{
+outline: none;
+}
+.mt_5 {
+  margin-top: 2em;
+}
+.chosen-container {
+  margin-top: 1.4em;
+}
+.report_container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.report_card span {
+  font-size: 160%;
+  font-family: 'Scada', sans-serif;
+}
+.event_green {
+  color: rgb(8, 110, 8);
+}
+.event_red {
+  color: rgb(136, 0, 0);
+}
+.report_card h2 {
+  font-family: 'Scada', sans-serif;
+}
+.report_card {
+  width: 30%;
+  height: 200px;
+  transition: 0.6s;
+  text-align: center;
+  margin-top: 1em;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #0D0D0D;
+}
+.report_card:hover {
+  /* -webkit-transform: scale(1.2); */
+  /* -ms-transform: scale(1.2); */
+  transform: scale(1.1);
+}
+.report_container {
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+.div_add_ticket_1 {
+  margin-top: 2em;
+}
+.div_add_ticket_2 a {
+  margin-left: 2em;
+  color: #0D0D0D;
+  font-family: 'Scada', sans-serif;
+  font-size: 135%;
+}
+.div_add_ticket_2 {
+  width: 20%;
+  padding: 0.5em;
+  border: 1px solid #0D0D0D;
+}
+.ticketBuySaveCount input {
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: 1px solid #0D0D0D;
+  padding: 0.2em;
+  text-align: center;
+  font-size: 120%;
+}
+.ticketBuySaveDesc p {
+  font-size: 140%;
+}
+.ticketBuySavePrice p {
+  font-size: 140%;
+}
+.tBs_sub button {
+  font-size: 120%;
+  cursor: pointer;
+  border: none;
+  background-color: #fff;
+}
+.tBs_sub {
+  margin-top: 0.46em;
+}
+.ticketBuySave {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 60%;
+  margin: auto;
+  padding: 0.4em 0.4em;
+  border: 1px solid #0D0D0D;
+  font-family: 'Scada', sans-serif;
+}
+.return_ticket_div a {
+  font-size: 125%;
+  color: #0D0D0D;
+  position: absolute;
+  margin-left: 38%;
+  font-family: 'Scada', sans-serif;
+}
+.return_ticket_div {
+  padding: 0.1em;
+  position: relative;
+  border-top: 1px solid #0D0D0D;
+}
+.ticketBuyA {
+  border-top: 1px solid #0D0D0D;
+  padding-top: 0.2em;
+
+}
+.green_font_span {
+  font-family: 'Scada', sans-serif;
+  color: #085902; 
+  margin-left: 2%;
+}
+.moder_div_events {
+  margin-top: 1%;
+}
+.red_font_span {
+  font-family: 'Scada', sans-serif;
+  color: #750000;
+  margin-left: 2%;
+}
+.ticketBuyA a {
+  font-size: 120%;
+  color: #0D0D0D;
+}
+.ticketPrice p {
+  font-size: 140%;
+}
+.ticketDescription p {
+  font-size: 140%;
+}
+.ticketGiftSaveOwner select {
+  width: 34.6%;
+  margin-top: 0.8em;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: 1px solid #0D0D0D;
+}
+.ticketBuy {
+  display: flex;
+  flex-direction: column;
+  width: 49%;
+  text-align: center;
+  margin-top: 1em;
+  padding: 0.4em 0.4em;
+  border: 1px solid #0D0D0D;
+  font-family: 'Scada', sans-serif;
+}
+
+.d_flex {
+  display: flex;
+}
+.j_center {
+  display: flex;
+  justify-content: center;
+}
+.flex_column {
+  flex-direction: column;
+}
+.b_inp {
+  text-align: center;
+}
+.b_inp label {
+  font-family: 'Scada', sans-serif;
+  margin: 0.5em auto;
+  font-size: 130%;
+}
+.b_inp input {
+  border: 1px solid #0D0D0D;
+  font-family: 'Scada', sans-serif;
+  padding: 0.3em 0.3em;
+  font-size: 115%;
+}
+.create_ticket_btn {
+  display: flex;
+  justify-content: space-around;
+}
+.create_ticket_btn button {
+  height: 2em;
+  width: 30%;
+}
+.ticket_create_2 {
+  justify-content: center;
+}
+.ticket_2 {
+  width: 60%;
+}
+.inactive {
+  pointer-events: none;
+  cursor: default;
+}
+.ticket_2_name {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+}
+.disabled {
+  pointer-events: none;
+  cursor: default;
+}
+.card_img {
+  max-width: 100%;
+  height: 100%;
+}
+.gift_submit {
+  display: flex;
+  flex-direction: column;
+}
+.endless_container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.endless_more {
+  font-family: 'Scada', sans-serif;
+  font-size: 150%;
+  text-decoration: none;
+  color: #0D0D0D;
+  border: 1px solid #0D0D0D;
+  padding: 0.2em 0.5em;
+}
+.card_img img {
+  width: 100%;
+  height: 100%;
+  object-fit:fill;
+}
+.reg_a {
+  color: #0D0D0D;
+  margin: 1em 2.3em;
+}
+.reg_a:after {
+  display: block;
+  /* margin-top: 1%; */
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: #00010D;
+  content: "";
+  transition: width 0.3s ease-out;
+}
+.reg_a:hover:after,
+.reg_a:focus:after {
+  width: 62%;
+}
+.mfp-content {
+  text-align: center;
+}
+.mfp-bg {
+  opacity: 0.9;
+}
+.mfp-content {
+  width: 50%;
+}
+.mfp-bg {
+  background: #fff;
+}
+
+.popup_pass label {
+  
+  font-size: 130%;
+  font-weight: 400;
+}
+.div_change_user_info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.border_ch  {
+  border: 1px solid #0D0D0D;
+}
+.border_none {
+  border: none;
+}
+.div_change_user_info select {
+  width: 50%;
+  height: 1.6em;
+  margin: 1.2em auto;
+  text-align: center;
+}
+.comment_post_form_an {
+  transition: all 2s linear;
+}
+.comment_post_form input:hover {
+  background-color: rgba(240, 239, 239, 100);
+}
+.comment_post_form input {
+  margin-top: 1em;
+  width: 34%;
+  padding: 0.2em 0.2em;
+  transition: 1s;
+  font-family: 'Scada', sans-serif;
+  font-size: 130%;
+  cursor: pointer;
+  background-color: #fff;
+  border: 1px solid #0D0D0D;
+  color: #0D0D0D;
+}
+.comment_post_form textarea {
+  max-width: 100%;
+  min-width: 100%;
+  max-height: 4em;
+  padding: 0.2em 0.2em;
+  font-family: 'Scada', sans-serif;
+  font-size: 130%;
+}
+.comment_post_form form{
+  display: flex;
+  flex-direction: column;
+}
+.div_change_user_info input {
+  width: 50%;
+  height: 1.6em;
+  margin: 1.2em auto;
+  text-align: center;
+}
+.div_change_user_info button {
+  width: 50%;
+  height: 1.6em;
+  margin: 1.2em auto;
+  text-align: center;
+}
+.div_change_user_info h3 {
+  margin: auto;
+}
+h1 {
+  font-family: 'Scada', sans-serif;
+}
+ul {
+ margin: 0;
+ padding: 0;
+ list-style: none;
+}
+.hidden {
+  display: none;
+}
+.a-block {
+  display: inline-block;
+}
+
+		.rating {
+			width: 226px;
+			margin: auto;
+			font-size: 300%;
+			overflow:hidden;
+		}
+.rating input {
+  float: right;
+  opacity: 0;
+  position: absolute;
+}
+		.rating a,
+    .rating label {
+			float:right;
+			color: #aaa;
+			text-decoration: none;
+			-webkit-transition: color .4s;
+			-moz-transition: color .4s;
+			-o-transition: color .4s;
+			transition: color .4s;
+		}
+.rating label:hover ~ label,
+.rating input:focus ~ label,
+.rating label:hover,
+		.rating a:hover,
+		.rating a:hover ~ a,
+		.rating a:focus,
+		.rating a:focus ~ a		{
+			color: #0D0D0D;
+			cursor: pointer;
+		}
+		.rating2 {
+			direction: rtl;
+		}
+		.rating2 a {
+			float:none
+		}
+.div_add_additional_form_lvl_1 {
+  height: 4em;
+}
+#id_event_date {
+  z-index: 999999999;
+}
+.reg_button {
+  width: 100%;
+  height: 100%;
+  font-family: 'Scada', sans-serif;
+  border: none;
+  background-color: inherit;
+  cursor: pointer;
+}
+.div_add_additional_form_lvl_2 {
+  height: 4em;
+}
+.div_add_additional_form_lvl_3 {
+  height: 4em;
+}
+.div_add_additional_form_lvl_4 {
+  height: 4em;
+}
+.stars {
+  font-family: 'Scada', sans-serif;
+}
+.map_100 {
+  width: 100%;
+}
+.section_nav {
+  text-align: center;
+  line-height: 10px;
+}
+.Header {
+  background-color: #F5F4F4;
+  font-family: 'Scada', sans-serif;
+  margin: auto;
+  position:relative;
+  max-width: 1200px;
+  height: 80px;
+}
+.Header_inner {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+.HeaderLogo {
+  margin: auto;
+  flex:auto;
+}
+.LogoLink {
+  font-family: 'Scada', sans-serif;
+  font-size: 175%;
+  font-weight: 500;
+  color: #0D0D0D;
+  margin-left: 10%;
+  margin-top: 5%;
+}
+.citychenger {
+  margin: auto;
+  flex:auto;
+}
+.livesearch {
+  font-family: 'Scada', sans-serif;
+  height: 1.625em;
+  height: 57%;
+  border: 1px solid #00010D;
+}
+.HeaderSearch {
+  position: relative;
+  width: 27em;
+  margin: auto;
+  flex:auto;
+}
+
+.searchinput {
+  border: 1px solid #00010D;
+  outline: none;
+  width: 18.88em;
+  height: 1.375em;
+  padding-left: 2%;
+}
+.searchbutton {
+  border: none;
+  outline: none;
+  position: absolute;
+  height: 1.62em;
+  width: 2em;
+  background: #00010D;
+  cursor: pointer;
+}
+.searchbutton:before {
+  content: "\f002";
+  font-family: 'Font Awesome 5 Free','Font Awesome 5 Brands';
+  color: #F9F0DA;
+  font-size: 20px;
+  font-weight: 900;
+}
+.HeaderNavigation {
+  display: flex;
+  justify-content: space-between;
+  flex:auto;
+}
+.HeaderNavigation a {
+  font-family: 'Scada', sans-serif;
+  font-size: 120%;
+  color: #00010D;
+}
+.HeaderNavigation a:after {
+	display: block;
+  margin-top: 3%;
+	left: 0;
+	width: 0;
+	height: 1px;
+	background-color: #00010D;
+	content: "";
+	transition: width 0.3s ease-out;
+}
+.HeaderNavigation a:hover:after ,
+.HeaderNavigation a:focus:after  {
+	width: 100%;
+}
+
+.Events {
+  margin: 12.5% auto auto auto;
+}
+.Support {
+  margin: 12.5%  auto auto auto;
+}
+.Enter {
+  margin: 12.5%  auto auto auto;
+}
+.main_filter {
+  display: flex;
+  justify-content: space-between;
+  width: 45%;
+}
+.event_type_div {
+  border: 1px solid #000;
+  height: 2em;
+}
+.event_type_filter {
+  font-family: 'Scada', sans-serif;
+  border:none;
+  width: 100%;
+  height: 100%;
+}
+.age_div {
+  border: 1px solid #000;
+}
+.age_filter {
+  font-family: 'Scada', sans-serif;
+  width: 100%;
+  height: 100%;
+  border:none;
+}
+.date_picker_div {
+  height: 2em;
+  width: 10.31em;
+}
+.date_picker {
+  font-family: 'Scada', sans-serif;
+  font-size: 0.95em;
+  padding-left:2%;
+  float: left;
+  height: 100%;
+  width: 100%;
+  border: 1px solid #000;
+}
+.main_container {
+  margin: auto;
+  max-width: 1200px;
+  min-height: calc(100vh - 9.375em);
+}
+
+.event_create_wrapper2 {
+  width: 60%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+.event_create_div h3 {
+  font-family: 'Scada', sans-serif;
+  max-width: 100%;
+  margin: 1em auto;
+  border-top: 1px solid #0D0D0D;
+  border-bottom: 1px solid #0D0D0D;
+  padding: 1em;
+}
+.event_create_div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.event_create_div input {
+  padding: 0.3em 0.3em;
+  font-family: 'Scada', sans-serif;
+  font-size: 115%;
+}
+.event_create_div textarea {
+  padding: 0.3em 0.3em;
+  font-family: 'Scada', sans-serif;
+  font-size: 115%;
+}
+.event_create_div select {
+  padding: 0.3em 0.3em;
+  font-family: 'Scada', sans-serif;
+  font-size: 115%;
+}
+.event_create_div label {
+  font-family: 'Scada', sans-serif;
+  font-size: 130%;
+  margin: 0.5em auto;
+}
+.event_create_div span {
+  margin: 0.5em auto;
+  font-size: 130%;
+  font-family: 'Scada', sans-serif;
+
+}
+.h1_ma {
+  text-align: center;
+  /* margin: auto; */
+}
+
+.event_create_div p {
+  margin: 0.8em auto;
+}
+.inp_border {
+  border: 1px solid #0D0D0D;
+}
+
+.event_create_div_btn {
+  display: flex;
+  justify-content: space-around;
+}
+.event_create_div_btn button {
+  height: 2em;
+  width: 30%;
+}
+.border_up {
+  /* border-top: 1px solid #00010D;
+  margin-top: 0.3em; */
+  /* opacity: ; */
+}
+.add_form_radio {
+  zoom: 1.4;
+  margin: 0.5em auto;
+  
+}
+.slider_div {
+  margin-top: 3%;
+  height: 30em;
+}
+.slider {
+      overflow: hidden;
+      max-width: 1200px;
+      height: 100%;
+      border: 1px solid #000ff;
+    }
+
+    .slider__wrapper {
+      position: relative;
+      overflow: hidden;
+      height: 100%;
+    }
+
+    .slider__items {
+      display: flex;
+      transition: transform 1.5s ease;
+    }
+
+    /* стили для слайдов */
+    .slider__item {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+
+    /* стили для кнопок "вперед" и "назад" */
+    .slider__control {
+      position: absolute;
+      top: 50%;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      color: #fff;
+      text-align: center;
+      opacity: 0.5;
+      height: 50px;
+      transform: translateY(-50%);
+      background: rgba(0, 0, 0, 0.5);
+    }
+
+    .slider__control_show {
+      display: flex;
+    }
+
+    .slider__control:hover,
+    .slider__control:focus {
+      color: #fff;
+      text-decoration: none;
+      outline: 0;
+      opacity: 0.9;
+    }
+
+    .slider__control_prev {
+      left: 0;
+    }
+
+    .slider__control_next {
+      right: 0;
+    }
+
+    .slider__control::before {
+      content: '';
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      background: transparent no-repeat center center;
+      background-size: 100% 100%;
+    }
+
+    .slider__control_prev::before {
+      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
+    }
+
+    .slider__control_next::before {
+      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
+    }
+
+    /* стили для индикаторов */
+    /* .slider__indicators {
+      position: absolute;
+      right: 0;
+      bottom: 10px;
+      left: 0;
+      z-index: 15;
+      display: flex;
+      justify-content: center;
+      padding-left: 0;
+      margin-right: 15%;
+      margin-left: 15%;
+      list-style: none;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
+    .slider__indicators li {
+      box-sizing: content-box;
+      flex: 0 1 auto;
+      width: 30px;
+      height: 4px;
+      margin-right: 3px;
+      margin-left: 3px;
+      text-indent: -999px;
+      cursor: pointer;
+      background-color: rgba(255, 255, 255, 0.5);
+      background-clip: padding-box;
+      border-top: 10px solid transparent;
+      border-bottom: 10px solid transparent;
+    }
+
+    .slider__indicators li.active {
+      background-color: #fff;
+    } */
+
+    .slider__item_1 {
+      background-image: url("Eminem-2.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: top;
+    }
+    .slider__item_2 {
+      background-image: url("Lil-Pump-1-e1528382834120-1920x1114.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+    .slider__item_3 {
+      background-image: url("puten.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: top;
+    }
+    .slider__item_4 {
+      background: linear-gradient(to right, #243B55, #141E30);
+    }
+    .slider__item {
+      height: 320px;
+      overflow: hidden;
+      position: relative;
+    }
+    .slider__item_inner {
+      position: absolute;
+      left: 8%;
+      right: 8%;
+      top: 36px;
+      bottom: 36px;
+      overflow: hidden;
+      color: #fff;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+    .slider__item_img {
+      flex: 0 0 100px;
+      max-width: 100px;
+    }
+    .slider__item_testimonial {
+      display: grid;
+      grid-template-columns: repeat(10, 7.500em);
+      grid-template-rows: repeat(24, 1.250em);
+    }
+    .slider__item_name {
+      font-weight: 300;
+      background-color: rgba(255, 255, 255, 0.2);
+      font-family: 'Scada', sans-serif;
+      margin-left: 6%;
+      margin-right: 5%;
+      grid-area: 20/1/22/6;
+      font-size: 140%;
+      color: rgba(255, 255, 255, 0.8);
+    }
+    .slider__item_date__place {
+      font-weight: 300;
+      margin-right: 5%;
+      padding-top: 3%;
+      background-color: rgba(255, 255, 255, 0.2);
+      font-family: 'Scada', sans-serif;
+      margin-left: 6%;
+      grid-area: 22/1/24/6;
+      font-size: 120%;
+      color: rgba(255, 255, 255, 0.8);
+    }
+    /* .slider__item_text {
+      background-color: yellow;
+      font-size: 16px;
+      color: rgba(255, 255, 255, 0.5);
+      margin-bottom: 12px;
+      display: none;
+    } */
+    @media (min-width: 576px) {
+      .slider__item {
+        height: 480px;
+      }
+      .slider__item_inner {
+        flex-direction: row;
+      }
+      /* .slider__item_testimonial {
+        margin-left: 15px;
+      } */
+      .slider__item_img {
+        flex: 0 0 150px;
+        max-width: 150px;
+        height: 200px;
+      }
+      /* .slider__item_testimonial {
+        text-align: left;
+      } */
+      .slider__item_post,
+      .slider__item_text {
+        display: block;
+      }
+    }
+    .slider__item_action {
+      margin-right: 5%;
+      grid-area: 20/8/22/11;
+    }
+    .btn {
+      display: block;
+      font-weight: 600;
+      text-align: center;
+      white-space: nowrap;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      border: 1px solid #969696;
+      border-radius: 3px;
+      padding: .375rem .75rem;
+      font-size: 1.3rem;
+      line-height: 1.5;
+      transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+      color: #fff;
+      background-color: rgba(255, 255, 255, 0.2);
+      text-decoration: none;
+    }
+    .btn:hover {
+      color: #fff;
+      background-color: rgba(255, 255, 255, .5);
+    }
+
+    .maincards {
+      width: 100%;
+      height: 2200px;
+      border: 3px solid #ccc;
+      font-family: 'Scada', sans-serif;
+    }
+    .div_expected_cards {
+      height: auto;
+      display: flex;
+      /* flex-direction: column; */
+      justify-content: space-between;
+      flex-wrap: wrap; /*NEW*/
+    }
+    .div_expected_cards_ret {
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      /* justify-content: space-between; */
+    }
+    .div_expected_cards_line_1 {
+      display: flex;
+      /* flex-direction: column; */
+       justify-content: space-between;
+      margin-top: 1.5em;
+    }
+    .div_expected_cards_line_2  {
+      display: flex;
+      /* flex-direction: column; */
+       justify-content: space-between;
+      margin-top: 1.5em;
+    }
+    .main_cards {
+      /* height: 100%; */
+      /* width: 100%; */
+      display: flex;
+      /* flex-direction: row; */
+      justify-content: space-between; 
+      flex-wrap: wrap; /*NEW*/
+    }
+    .main_cards_mrg {
+      margin-top: 25px;
+    }
+    .maincards2 {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+    }
+    .maincards3 {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+    }
+    .count_tickets a{
+      font-family: 'Scada', sans-serif;
+      margin: 2% 2%;
+      color: #0D0D0D;
+    }
+    .div_main_card10 {
+      height: 27.25em;
+      border: 1px solid #d4d4d4;
+      box-sizing: border-box;
+      margin-bottom: 10px;
+      width: 33%;
+      transition: 0.2s;
+    }
+    .div_main_card1 {
+      height: 23.25em;
+      border: 1px solid #d4d4d4;
+      box-sizing: border-box;
+      margin-bottom: 10px;
+      width: 33%;
+      transition: 0.2s;
+      /* width: calc(1/3*100% - (1 - 1/3)*10px); */
+    }
+    .div_main_card1:hover {
+      border: 1px solid #0D0D0D;
+    }
+    .main_card_img {
+      position: relative;
+      max-width: 100%;
+      height: 66.6666666667%;
+      /* background-image: url("Eminem-2.jpg"); */
+      /* background-repeat: no-repeat; */
+      /* background-size: cover; */
+      /* cursor: pointer; */
+    }
+ 
+    .main_card_img_info {
+      z-index: 999;
+      position: relative;
+      bottom: 100%;
+      height: 100%;
+      width: 50%;
+      float: right;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+    }
+    .main_card_img_info div {
+      border: 1px solid rgb(150, 150, 150);
+      background-color: rgba(255, 255, 255, 0.5);
+      height: 2.813em;
+      width: 13.375em;
+      text-align: center;
+      margin-left: 18%;
+      cursor: pointer;
+      transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+      padding-top: 5%;
+    }
+    .main_card_img_info div:hover {
+      background-color: rgba(255, 255, 255, .7);
+      transition: 0.5s;
+    }
+    .main_card_img_info a {
+      font-family: 'Scada', sans-serif;
+      font-size: 150%;
+      color: #00010D;
+    }
+    .main_card_name {
+      padding-left: 2%;
+      width: 98%;
+    }
+    .name_links {
+      font-family: 'Scada', sans-serif;
+      font-size: 150%;
+      color: #00010D;
+      /* margin-left: 2%; */
+    }
+    .main_card_date_place {
+      /* display: flex; */
+      /* justify-content: space-between; */
+      margin-top: 8%;
+      width: 100%;
+      font-family: 'Scada', sans-serif;
+      color: #00010D;
+    }
+    .main_card_date_place_2{
+      /* display: flex; */
+      /* justify-content: space-between; */
+      margin-top: 8%;
+      width: 100%;
+      font-family: 'Scada', sans-serif;
+      color: #00010D;
+    }
+    .main_card_date_place_links {
+      margin-left: 2%;
+      color: #00010D;
+    }
+    .main_card_div_action {
+      position: absolute;
+      width: 100%;
+      height: 20%;
+      top: 75%;
+      display: flex;
+      justify-content: space-between;
+    }
+    .main_card_div_action_price {
+      padding-top: 2.5%;
+      width: 35%;
+      margin-left: 5%;
+      background-color: rgba(255, 255, 255, .5);
+      text-align: center;
+      font-family: 'Scada', sans-serif;
+      font-size: 125%;
+      border: 1px solid #969696;
+      border-radius: 1px;
+    }
+    .main_card_div_action_buy {
+      padding-top: 2.5%;
+      width: 35%;
+      margin-right: 5%;
+      text-align: center;
+      font-family: 'Scada', sans-serif;
+      font-size: 125%;
+      background-color: rgba(255, 255, 255, .5);
+      border: 1px solid #969696;
+      border-radius: 1px;
+      transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    }
+    .main_card_div_action_buy:hover {
+      background-color: rgba(255, 255, 255, .7);
+      transition: 0.5s;
+    }
+    .main_card_btn_buy {
+      display: block;
+      height: 100%;
+      color: #00010D;
+
+    }
+    /* .div_main_card2 {
+      height: 340px;
+      border: 2px solid #c4c2c2;
+      border-radius: 3px;
+      box-sizing: border-box;
+      margin-bottom: 10px;
+      width: calc(1/3*100% - (1 - 1/3)*10px);
+    }
+
+    .div_main_card3 {
+      height: 340px;
+      border: 2px solid #c4c2c2;
+      border-radius: 3px;
+      box-sizing: border-box;
+      margin-bottom: 10px;
+      width: calc(1/3*100% - (1 - 1/3)*10px);
+    }
+    .div_main_card4 {
+      height: 340px;
+      border: 2px solid #c4c2c2;
+      border-radius: 3px;
+      box-sizing: border-box;
+      margin-bottom: 10px;
+      width: calc(1/3*100% - (1 - 1/3)*10px);
+    }
+    .div_main_card5 {
+      height: 340px;
+      border: 2px solid #c4c2c2;
+      border-radius: 3px;
+      box-sizing: border-box;
+      margin-bottom: 10px;
+      width: calc(1/3*100% - (1 - 1/3)*10px);
+    }
+
+    .div_main_card6 {
+      height: 340px;
+      border: 2px solid #c4c2c2;
+      border-radius: 3px;
+      box-sizing: border-box;
+      margin-bottom: 10px;
+      width: calc(1/3*100% - (1 - 1/3)*10px);
+    }
+    .div_main_card7 {
+      height: 340px;
+      border: 2px solid #c4c2c2;
+      border-radius: 3px;
+      box-sizing: border-box;
+      margin-bottom: 10px;
+      width: calc(1/3*100% - (1 - 1/3)*10px);
+    }
+    .div_main_card8 {
+      height: 340px;
+      border: 2px solid #c4c2c2;
+      border-radius: 3px;
+      box-sizing: border-box;
+      margin-bottom: 10px;
+      width: calc(1/3*100% - (1 - 1/3)*10px);
+    }
+
+    .div_main_card9 {
+      height: 340px;
+      border: 2px solid #c4c2c2;
+      border-radius: 3px;
+      box-sizing: border-box;
+      margin-bottom: 10px;
+      width: calc(1/3*100% - (1 - 1/3)*10px);
+    } */
+    .div_main_btn_load_more {
+      height: 100%;
+      padding-top: 2%;
+    }
+    .div2_btn_load_more {
+      width: 15%;
+      text-align: center;
+      margin: auto;
+      cursor: pointer;
+      background-color: rgba(255, 255, 255, .5);
+      border: 1px solid #0D0D0D;
+      padding: 1.5%;
+      transition: 1s;
+    }
+    .div2_btn_load_more:hover {
+      background-color: rgba(240, 239, 239, 100);
+    }
+    .btn_load_more {
+      font-family: 'Scada', sans-serif;
+      font-size: 150%;
+      font-weight: 500;
+      color: #0D0D0D;
+    }
+    .banner_create_event a {
+      color: #0D0D0D;
+    }
+    .banner_create_event {
+      max-width: 1200px;
+      padding-top: 2%;
+      padding-bottom: 2%;
+      margin: auto;
+      margin-top: 2%;
+      margin-bottom: 2%;
+      display: block;
+      height: 3%;
+      text-align: center;
+      font-family: 'Scada', sans-serif;
+      font-size: 200%;
+      border: 1px solid #969696;
+      background-color: #dedede;
+    }
+    /* .ffooter {
+      margin-top: -10px;
+    } */
+    .Footer {
+      margin: auto;
+      max-width: 1200px;
+      height: 9.375em;
+      background-color: #F5F4F4;
+      display: flex;
+
+    }
+    .footer_leftside {
+      height: 100%;
+    }
+    .footer_rightside {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      margin-left: 2em;
+      /* justify-content: flex-end; */
+      flex-direction: column;
+    }
+    .footer_leftside_Logo {
+      padding-top: 0.5em;
+      padding-left: 2%;
+      font-family: 'Scada', sans-serif;
+      font-size: 175%;
+      font-weight: 500;
+      color: #0D0D0D;
+    }
+    .footer_middleside_nav {
+      display: flex;
+      /* border-bottom: 1px solid #c3c2c2; */
+    }
+    .footer_middleside_nav a {
+      margin: 2em auto auto 4em;
+      font-family: 'Scada', sans-serif;
+      font-size: 120%;
+      font-weight: 300;
+      color: #0D0D0D;
+    }
+    .footer_middleside_nav a:after {
+    	display: block;
+      margin-top: 3%;
+    	left: 0;
+    	width: 0;
+    	height: 1px;
+    	background-color: #00010D;
+    	content: "";
+    	transition: width 0.3s ease-out;
+    }
+    .footer_middleside_nav a:hover:after,
+    .footer_middleside_nav a:focus:after {
+    	width: 100%;
+    }
+    .footer_leftside_nav {
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+      padding-top: 5%;
+
+    }
+    .footer_media_links {
+      display: flex;
+      align-items: center;
+      font-size: 250%;
+      justify-content: space-around;
+      margin-left: 3%;
+      margin-right: 15%;
+    }
+    .links {
+      margin-top: 0.5em;
+      color: #0D0D0D;
+    }
+/* 2 страница */
+.breadcrumbs {
+  width: 100%;
+  margin:auto;
+}
+.breadcrumbs a {
+  font-family: 'Scada', sans-serif;
+}
+ul.breadcrumb {
+  padding: 0.625em 0.625em 0.625em 0em;
+  list-style: none;
+    /* background-color: #eee; */
+}
+ul.breadcrumb li {
+  display: inline;
+  font-size: 18px;
+}
+/* Add a slash symbol (/) before/behind each list item */
+ul.breadcrumb li+li:before {
+  padding: 8px;
+  color: black;
+  content: "/\00a0";
+}
+.bread_current {
+  font-family: 'Scada', sans-serif;
+  pointer-events: none;
+  cursor: default;
+  color: #00010D;
+}
+.bread_active {
+  font-family: 'Scada', sans-serif;
+  color: #00010D;
+  text-decoration: none;
+}
+/* Add a color on mouse-over */
+ul.breadcrumb li a:hover {
+  color: #00010D;
+  text-decoration: underline;
+}
+.event_lookup_img_main  {
+  width: 100%;
+  height: 25em;
+  border: 1px solid #0D0D0D;
+  position: relative;
+  overflow:hidden;
+  /* background-image: url("Eminem-2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top; */
+}
+.event_lookup_img_main img {
+  position:absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  /* transform: translate(-50%, -50%); */
+}
+.event_lookup_img_notmain {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.event_lookup_img_under img{
+  height: 100%;
+  width: 100%;
+}
+.event_lookup_img_under {
+  margin-top: 3%;
+  border: 1px solid #0D0D0D;
+  height: 12.5em;
+  width: 21.88em;
+}
+.about_h1_icons {
+  display: flex;
+  /* justify-content:space-between; */
+}
+.event_about_h1 {
+  flex:2.5;
+}
+.event_about_icons {
+  margin-top: 1.4%;
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: space-between;
+  flex:1;
+}
+.event_about_icons i {
+  margin-top: 2%;
+  font-size: 2em;
+  position: relative;
+}
+.event_about_icons i:hover::after {
+  content: attr(data-title);
+  position: absolute; /* Абсолютное позиционирование */
+  top:45%; /* Положение подсказки */
+  right: 100%;
+  z-index: 1; /* Отображаем подсказку поверх других элементов */
+  background: #ffffff; /* Полупрозрачный цвет фона */
+  font-family: 'Scada', sans-serif; /* Гарнитура шрифта */
+  font-size: 15px; /* Размер текста подсказки */
+  font-weight: 700;
+  padding: 5px 10px; /* Поля */
+  border: 1px solid #333;
+}
+.event_about_icons img {
+  position: relative;
+}
+.event_about_icons img:hover::after {
+  content: attr(data-title);
+  position: absolute; /* Абсолютное позиционирование */
+  top:45%; /* Положение подсказки */
+  right: 1f00%;
+  z-index: 1; /* Отображаем подсказку поверх других элементов */
+  background: #ffffff; /* Полупрозрачный цвет фона */
+  font-family: 'Scada', sans-serif; /* Гарнитура шрифта */
+  font-size: 15px; /* Размер текста подсказки */
+  font-weight: 700;
+  padding: 5px 10px; /* Поля */
+  border: 1px solid #333;
+}
+.event_about_icons div {
+  position: relative;
+}
+.event_about_icons div:hover::after {
+  content: attr(data-title);
+  position: absolute; /* Абсолютное позиционирование */
+  top:80%; /* Положение подсказки */
+  right: 100%;
+  z-index: 1; /* Отображаем подсказку поверх других элементов */
+  background: #ffffff; /* Полупрозрачный цвет фона */
+  font-family: 'Scada', sans-serif; /* Гарнитура шрифта */
+  font-size: 15px; /* Размер текста подсказки */
+  font-weight: 700;
+  padding: 5px 10px; /* Поля */
+  border: 1px solid #333;
+}
+.event_lookup_buttons_top {
+  display: flex;
+  width: 70%;
+}
+.event_lookup_buttons_top div {
+  width: 14.5em;
+  height: 3em;
+  text-align: center;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, .5);
+  border: 1px solid #0D0D0D;
+  padding-top: 2%;
+}
+.event_lookup_buttons_top a {
+  color: #0D0D0D;
+  text-decoration: none;
+  font-size: 170%;
+  font-family: 'Scada', sans-serif;
+}
+.event_lookup_btn_gift {
+  margin-left: 23%;
+  transition: 1s;
+}
+.event_lookup_btn_gift:hover {
+  background-color: rgba(240, 239, 239, 100);
+}
+.event_lookup_btn_gift_bottom {
+  margin:auto;
+  transition: 1s;
+}
+.event_lookup_btn_gift_bottom:hover {
+  background-color: rgba(240, 239, 239, 100);
+}
+.event_lookup_btn_buy_bottom {
+  margin:auto;
+  transition: 1s;
+}
+.event_lookup_btn_buy_bottom:hover {
+  background-color: rgba(240, 239, 239, 100);
+}
+.event_lookup_btn_buy {
+  transition: 1s;
+}
+.event_lookup_btn_buy:hover {
+  background-color: rgba(240, 239, 239, 100);
+}
+.event_lookup_description {
+  font-family: 'Scada', sans-serif;
+}
+/* .event_lookup_description h2 {
+  font-size: 150%;
+} */
+.event_lookup_description p {
+  font-size: 150%;
+  letter-spacing: 0.03em;
+}
+.event_lookup_icons_description {
+  width:100%;
+  height: 10em;
+  display: flex;
+  justify-content: space-between;
+  /* display: grid;
+  grid-template-columns: repeat(2,29em); */
+}
+
+.event_lookup_icons_description1 {
+  display: flex;
+  flex-direction: column;
+}
+.event_lookup_icons_description2 {
+  display: flex;
+  flex-direction: column;
+}
+.event_lookup_icons_description1 i:nth-child(2)
+{
+  margin-top: 1em;
+}
+.event_lookup_icons_description i {
+  font-size: 175%;
+  margin-top: 2%;
+}
+.event_lookup_icons_description span {
+  margin-top: 2%;
+  font-size: 70%;
+  margin-left: 5%;
+  font-weight: 500;
+  font-family: 'Scada', sans-serif;
+}
+.icon18{
+  margin-top: 1.8%;
+  height: 34px;
+  width: 34px;
+}
+.event_lookup_organisation {
+  /* height: 10em; */
+}
+.event_lookup_organisation h2 {
+    font-family: 'Scada', sans-serif;
+}
+.organisator_form {
+  height: 10em;
+  width: 60%;
+  border: 1px solid #00010D;
+  display: flex;
+  cursor: pointer;
+  transition: 1s;
+}
+.organisator_form:hover {
+  background-color: rgba(240, 239, 239, 100);
+}
+.organisator_img {
+  width: 35%;
+  height: 100%;
+}
+.organisator_form img {
+  cursor: pointer;
+  border-radius: 12.5em;
+  height: 95%;
+  /* width: 28%; */
+  margin-left: 3%;
+  margin-top: 2%;
+  margin-bottom: 1%;
+}
+.organisator_name {
+  width: 100%;
+  padding-left:15%;
+  padding-top: 10%;
+}
+.organisator_name a {
+  font-size: 190%;
+  font-weight: 500;
+  color: #00010D;
+  font-family: 'Scada', sans-serif;
+}
+.event_location {
+  color: #00010D;
+  font-family: 'Scada', sans-serif;
+}
+.event_location_current a {
+  color: #00010D;
+  font-family: 'Scada', sans-serif;
+  font-size: 1.4em;
+}
+.event_location_map {
+  margin-top: 3%;
+}
+.event_lookup_reviews h2 {
+  color: #00010D;
+  font-family: 'Scada', sans-serif;
+}
+.reviews h3{
+  color: #00010D;
+  font-family: 'Scada', sans-serif;
+}
+.review_form {
+  margin-top: 1em;
+  display: flex;
+  border: 1px solid #00010D;
+}
+.review_form_accinfo {
+  display: flex;
+  width: 20%;
+  flex-direction: column;
+  height: 16.1em;
+}
+.review_form_accinfo img {
+  cursor: pointer;
+  border-radius: 12.5em;
+  height: 70%;
+  margin-left: 3%;
+  margin-top: 2%;
+  margin-bottom: 1%;
+}
+.review_form_accinfo a {
+  margin-left: 5%;
+  margin-top: 13%;
+  color: #00010D;
+  font-family: 'Scada', sans-serif;
+  font-size: 1.3em;
+}
+.review_sam {
+  width:100%;
+  padding-left: 2%;
+  padding-right: 2%;
+}
+.review_sam p {
+  color: #00010D;
+  font-family: 'Scada', sans-serif;
+  font-size: 1.3em;
+}
+.review_is {
+  height: 45%;
+  border-bottom: 2px solid #c4c2c2;
+}
+.answer {
+  display: flex;
+  /* height: 38%; */
+  justify-content: space-between;
+}
+.answer p {
+  height: 100%;
+}
+.answer_btn {
+  height: 1.4em;
+  margin-top: 1em;
+  padding: 0.4em;
+  border: 1px solid #0D0D0D;
+  cursor: pointer;
+  transition: 1s;
+}
+.answer_btn:hover {
+  background-color: rgba(240, 239, 239, 100);
+}
+.answer_btn a {
+  letter-spacing: 0.05em;
+  color: #00010D;
+  font-family: 'Scada', sans-serif;
+  font-size: 1.3em;
+}
+.review_form2 {
+  margin-top: 2%;
+}
+.pagination {
+  display: flex;
+}
+.reviews_pagination {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 1%;
+}
+.reviews_pagination a {
+  color: #00010D;
+  font-family: 'Scada', sans-serif;
+  font-size: 2em;
+  float: left;
+  text-decoration: none;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+}
+.reviews_pagination a.active {
+  background-color: #dedede;
+}
+.reviews_pagination a:hover:not(.active) {
+  background-color: #f5f4f4;
+}
+.reviews_btn_comment {
+  width: 100%;
+  margin-bottom: 2em;
+}
+.reviews_btn_left_comment {
+  width: 25.5em;
+  height: 3em;
+  text-align: center;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, .5);
+  border: 1px solid #0D0D0D;
+  padding-top: 1.5%;
+  transition: 1s;
+}
+.reviews_btn_left_comment:hover {
+  background-color: rgba(240, 239, 239, 100);
+}
+.reviews_btn_left_comment a {
+  color: #0D0D0D;
+  text-decoration: none;
+  font-size: 170%;
+  font-family: 'Scada', sans-serif;
+}
+.ticket_return_button_bottom_btn {
+  transition: 1s;
+}
+.ticket_return_button_bottom_btn:hover {
+  background-color: rgba(240, 239, 239, 100);
+}
+.event_lookup_buttons_bottom {
+  display: flex;
+  width: 70%;
+  margin: auto;
+
+}
+.event_lookup_buttons_bottom div {
+  margin-top: 3%;
+  width: 14.5em;
+  height: 3em;
+  text-align: center;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, .5);
+  border: 1px solid #0D0D0D;
+  padding-top: 2%;
+}
+.event_lookup_buttons_bottom a {
+  color: #0D0D0D;
+  text-decoration: none;
+  font-size: 170%;
+  font-family: 'Scada', sans-serif;
+}
+.simillar_events h2 {
+  color: #0D0D0D;
+  font-family: 'Scada', sans-serif;
+}
+.div_buy_ticket {
+  display: flex;
+  flex-wrap: wrap;
+  /* flex-direction: column; */
+}
+.div_buy_ticket1 {
+  border: 1px solid #0D0D0D;
+  display: flex;
+  height: 8em;
+  cursor: pointer;
+  transition: 1s;
+}
+.div_buy_ticket1:hover {
+  background-color: rgba(240, 239, 239, 100);
+}
+.div_buy_ticket2 {
+  margin-top: 1%;
+  border: 1px solid #0D0D0D;
+  display: flex;
+  height: 8em;
+  cursor: pointer;
+  transition: 1s;
+}
+.div_buy_ticket2:hover {
+  background-color: rgba(240, 239, 239, 100);
+}
+.ticket_name {
+  /* flex: 1; */
+  width: 20%;
+  color: #0D0D0D;
+  font-family: 'Scada', sans-serif;
+  text-align: center;
+  padding-top: 1%;
+}
+.ticket_description {
+  /* padding-top: 1%; */
+  width: 60%;
+  /* flex: 5; */
+  border-left: 2px solid #A19F9F;
+  padding-left: 2%;
+}
+.ticket_description p {
+  color: #0D0D0D;
+  font-family: 'Scada', sans-serif;
+  font-size: 150%;
+}
+.ticket_btn_buy {
+  /* flex: 1; */
+  width: 20%;
+  text-align: center;
+  padding-top: 2.6%;
+  border-left: 2px solid #A19F9F;
+  cursor: pointer;
+}
+.ticket_btn_buy a {
+  color: #0D0D0D;
+  font-family: 'Scada', sans-serif;
+  font-size: 150%;
+}
+/* //////////////////3 */
+.reviews_pagination_creator {
+  flex: 6;
+  display: flex;
+  margin-left: 35%;
+  /* justify-content: center; */
+  margin-top: 1%;
+}
+.reviews_pagination_creator a {
+  color: #00010D;
+  font-family: 'Scada', sans-serif;
+  font-size: 2em;
+  float: left;
+  text-decoration: none;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+}
+.reviews_pagination_creator a.active {
+  background-color: #dedede;
+}
+.reviews_pagination_creator a:hover:not(.active) {
+  background-color: #f5f4f4;
+}
+.reviews_pagination_all {
+  display: flex;
+}
+.show_much {
+  flex: 1;
+  margin-top: 1.6%;
+}
+.show_much select {
+  font-family: 'Scada', sans-serif;
+  font-size: 1.3em;
+  color: #00010D;
+  border: 1px solid #0D0D0D;
+}
+/* .show_much span {
+  font-size: 0.8em;
+}
+.show_much a:after {
+  display: block;
+  margin-top: 3%;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: #00010D;
+  content: "";
+  transition: width 0.3s ease-out;
+}
+.show_much a:hover:after,
+.show_much a:focus:after {
+  width: 87%;
+} */
+.event_lookup_creator_redact {
+  margin-right: 1.438em;
+  transition: 1s;
+}
+.event_lookup_creator_redact:hover {
+  background-color: rgba(240, 239, 239, 100);
+}
+.event_lookup_creator_report {
+  margin: auto;
+  transition: 1s;
+}
+.event_lookup_creator_report:hover {
+  background-color: rgba(240, 239, 239, 100);
+}
+.event_lookup_creator_deposite {
+  margin: auto;
+  transition: 1s;
+}
+.event_lookup_creator_deposite:hover {
+  background-color: rgba(240, 239, 239, 100);
+}
+.event_cancel_btn {
+  padding-top: 0.5%;
+  padding-left: 1.5%;
+  height: 2.5em;
+  width: 25%;
+  margin-top: 2%;
+  border: 1px solid #0D0D0D;
+  transition: 1s;
+}
+.event_cancel_btn:hover {
+  background-color: rgba(240, 239, 239, 100);
+}
+.event_cancel_btn a {
+  color: #0D0D0D;
+  text-decoration: none;
+  font-size: 170%;
+  font-family: 'Scada', sans-serif;
+}
+/* ////////////4 */
+.all_events_map {
+  margin-top: 1%;
+}
+/* ////////////5 */
+.ticket_return_button_bottom {
+  margin-top: 2%;
+}
+.ticket_return_button_bottom div{
+  width: 14.5em;
+  height: 2.5em;
+  text-align: center;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, .5);
+  border: 1px solid #0D0D0D;
+  padding-top: 1%;
+}
+.ticket_return_button_bottom a{
+  color: #0D0D0D;
+  text-decoration: none;
+  font-size: 170%;
+  font-family: 'Scada', sans-serif;
+}
+/* .....5......... */
+.UserLogo {
+  margin-top: 100%;
+}
+.EnterUser {
+  margin:auto;
+}
+.EnterUser a:hover:after ,
+.EnterUser a:focus:after  {
+	width: 0%;
+}
+.main_filter_my_tickets {
+  display: flex;
+}
+.date_picker_div_my_tickets {
+  height: 2em;
+  margin-left: 5%;
+}
+.event_type_div_my_tickets {
+  height: 2em;
+}
+.TicketsSearch {
+  margin-left: 5%;
+  position: relative;
+  width: 27em;
+  /* margin: auto; */
+  /* flex:auto; */
+}
+.TicketsForm {
+
+}
+.Ticketsinput {
+  border: 1px solid #00010D;
+  outline: none;
+  width: 18.88em;
+  height: 1.375em;
+  padding-left: 2%;
+  height: 2em;
+  font-family: 'Scada', sans-serif;
+}
+.searchbutton_my_tickets {
+  height: 100%;
+  width: 2.813em;
+}
+.my_tickets_cards h2 {
+  font-family: 'Scada', sans-serif;
+}
+.my_tickets_cards_top {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.my_tickets_cards_bottom {
+  display: flex;
+  justify-content: space-between;
+}
+.div_my_tickets_cards {
+  width: 48%;
+}
+.my_tickets_cards_bottom {
+  margin-top: 2em;
+}
+.my_tickets_cards_action {
+  padding-top: 0.5em;
+  font-size: 140%;
+  /* margin-right: 0; */
+  margin-left: 17em;
+}
+/* ................................. */
+.div_filter_deposite {
+  margin-left: 5%;
+}
+.my_events_cards h2 {
+  font-family: 'Scada', sans-serif;
+}
+.event_create {
+  border: 1px solid #0D0D0D;
+  width: 18em;
+  height: 2.500em;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  padding-top:1%;
+  transition: 1s;
+  margin-top: 3%;
+}
+.event_create:hover {
+  background-color: rgba(240, 239, 239, 100);
+}
+.event_create a {
+  font-family: 'Scada', sans-serif;
+  text-decoration: none;
+  color: #0D0D0D;
+  font-size: 170%;
+}
+.Footer_marg {
+  margin-top: 2em;
+}
+/* ........AUTH.......... */
+.auth_cont {
+  width: 20em;
+  height: 23em;
+  border: 1px solid #0D0D0D;
+  margin: auto;
+  margin-top: 20%;
+  font-family: 'Scada', sans-serif;
+}
+.auth_input_top {
+  /* border: 1px solid #0D0D0D; */
+  margin-top: 15%;
+}
+.auth_input_top_inner {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+.auth_login_input {
+  padding-left: 0.5em;
+  margin-left: 2.5em;
+  width: 14.500em;
+  height: 1.7em;
+  border: 1px solid #0D0D0D;
+}
+.auth_password_input {
+  padding-left: 0.5em;
+  margin-left: 2.5em;
+  width: 14.500em;
+  height: 1.7em;
+  margin-top: 2em;
+  border: 1px solid #0D0D0D;
+}
+.auth_input_top_inner a {
+  color: #0D0D0D;
+  margin-left: 2.5em;
+  margin-top: 1em;
+}
+.auth_input_top_inner a:after {
+  display: block;
+  /* margin-top: 1%; */
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: #00010D;
+  content: "";
+  transition: width 0.3s ease-out;
+}
+.auth_input_top_inner a:hover:after,
+.auth_input_top_inner a:focus:after {
+  width: 46%;
+}
+.auth_input_bottom_inner {
+  display: flex;
+  flex-direction: column;
+}
+.auth_input_bottom_inner_btn {
+  border: 1px solid #0D0D0D;
+  width: 11.2em;
+  height: 1.5em;
+  margin-left: 1.8em;
+  margin-top: 1em;
+  display: flex;
+  /* padding-top: 0.75em; */
+  justify-content: center;
+  cursor: pointer;
+  transition: 1s;
+  font-family: 'Scada', sans-serif;
+  font-size: 135%;  
+}
+/* .auth_input_bottom_inner_btn a {
+  margin-top: 1%;
+  font-family: 'Scada', sans-serif;
+  font-size: 135%;
+  color: #0D0D0D;
+} */
+.auth_input_bottom_inner_btn:hover {
+  background-color: rgba(240, 239, 239, 100);
+}
+
+.auth_input_bottom_inner_icons {
+  width: 15em;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+.auth_input_bottom_inner_icons a {
+  font-size: 250%;
+}
+.auth_cont_reg {
+  height: 29em;
+}
+.auth_input_bottom_inner_btn_reg {
+  margin-top: 10%;
+}
+/* ///////////////////////////................ */
+.acc_top_1__3 {
+  border: 1px solid #0D0D0D;
+  display: flex;
+  /* height: 19.688em; */
+  margin-top: 2em;
+}
+.acc_top_1__3_img {
+  display: flex;
+  flex-direction: column;
+}
+.acc_top_1__3_img img {
+  margin-top: 2%;
+  margin-left: 2%;
+  border-radius: 12.5em;
+}
+.acc_top_1__3_img a {
+  margin-top: 0.5em;
+  margin-left: 1.4em;
+  font-family: 'Scada', sans-serif;
+  font-size: 175%;
+  color: #686968;
+}
+.acc_top_1__3_info {
+  width: 70%;
+  padding-left: 2em;
+  display: flex;
+  flex-direction: column;
+}
+.acc_top_1__3_info p {
+  font-family: 'Scada', sans-serif;
+  font-size: 175%;
+  color: #0D0D0D;
+}
+.acc_top_1__3_info a {
+  margin-top: 0.5%;
+  font-family: 'Scada', sans-serif;
+  font-size: 175%;
+  color: #686968;
+}
+.acc_top_1__3_rank {
+}
+.acc_top_1__3_img a:after {
+	display: block;
+  margin-top: 2%;
+	left: 0;
+	width: 0;
+	height: 1px;
+	background-color: #00010D;
+	content: "";
+	transition: width 0.3s ease-out;
+}
+.acc_top_1__3_img a:hover:after ,
+.acc_top_1__3_img a:focus:after  {
+	width: 88%;
+}
+.change_info:after {
+	display: block;
+  margin-top: 0.6%;
+	left: 0;
+	width: 0;
+	height: 1px;
+	background-color: #00010D;
+	content: "";
+	transition: width 0.3s ease-out;
+}
+.change_info:hover:after ,
+.change_info:focus:after  {
+	width: 42%;
+}
+.pass1 {
+  margin-left: 3em;
+}
+.pass2 {
+  margin-left: 3.5em;
+}
+.pass3 {
+  margin-left: 0.3em;
+}
+.acc_top_1__3_rank_circle {
+  border: 1px solid #0D0D0D;
+  border-radius: 25em;
+  width: 10em;
+  height: 10em;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  margin-right: 0.5em;
+  margin-top: 0.5em;
+}
+.acc_top_1__3_rank_circle a {
+  font-family: 'Scada', sans-serif;
+  font-size: 175%;
+  color: #0D0D0D;
+  margin-top: 2.3em;
+}
+.acc_top_1__3_rank_circle:hover {
+  background-color: rgba(240, 239, 239, 100);
+  transition: 0.5s;
+}
+.acc_top_2__3 {
+  border: 1px solid #0D0D0D;
+  height: 9em;
+  display: flex;
+  flex-direction: column;
+  margin-top: 2em;
+  justify-content: space-around;
+}
+.acc_top_2__3 a {
+  margin-left: 1.3em;
+  font-family: 'Scada', sans-serif;
+  font-size: 175%;
+  color: #686968;
+}
+.change_pass:after {
+	display: block;
+  margin-top: 0.6%;
+	left: 0;
+	width: 0;
+	height: 1px;
+	background-color: #00010D;
+	content: "";
+	transition: width 0.3s ease-out;
+}
+.change_pass:hover:after ,
+.change_pass:focus:after  {
+	width: 18%;
+}
+.add_que:after {
+	display: block;
+  margin-top: 0.6%;
+	left: 0;
+	width: 0;
+	height: 1px;
+	background-color: #00010D;
+	content: "";
+	transition: width 0.3s ease-out;
+}
+.add_que:hover:after ,
+.add_que:focus:after  {
+	width: 33.5%;
+}
+.change_numb:after {
+	display: block;
+  margin-top: 0.6%;
+	left: 0;
+	width: 0;
+	height: 1px;
+	background-color: #00010D;
+	content: "";
+	transition: width 0.3s ease-out;
+}
+.change_numb:hover:after ,
+.change_numb:focus:after  {
+	width: 28%;
+}
+.menu_section {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 2em;
+}
+.menu_section a {
+  font-family: 'Scada', sans-serif;
+  font-size: 175%;
+  color: #0D0D0D;
+}
+.menu_section a:after {
+	display: block;
+  margin-top: 0.6%;
+	left: 0;
+	width: 0;
+	height: 1px;
+	background-color: #00010D;
+	content: "";
+	transition: width 0.3s ease-out;
+}
+.menu_section a:hover:after ,
+.menu_section a:focus:after  {
+	width: 100%;
+}
+/* .... */
+.support1__3 {
+  display: flex;
+  font-family: 'Scada', sans-serif;
+}
+.support2__3 {
+  display: flex;
+  margin-top: 2em;
+  font-family: 'Scada', sans-serif;
+}
+.support1__3_1 {
+  display: flex;
+  flex-direction: column;
+}
+.support1__3_1 a {
+  font-family: 'Scada', sans-serif;
+  font-size: 150%;
+  color: #686968
+}
+.support1__3_2 {
+  display: flex;
+  flex-direction: column;
+  margin-left: 35%;
+}
+.support1__3_2 a {
+  font-family: 'Scada', sans-serif;
+  font-size: 150%;
+  color: #686968
+}
+.support2__3_1 {
+  display: flex;
+  flex-direction: column;
+}
+.support2__3_1 a {
+  font-family: 'Scada', sans-serif;
+  font-size: 150%;
+  color: #686968
+}
+.support2__3_2 {
+  display: flex;
+  flex-direction: column;
+  margin-left: 45%;
+}
+.support2__3_2 a {
+  font-family: 'Scada', sans-serif;
+  font-size: 150%;
+  color: #686968
+}
+.support1__3_1a1:after {
+	display: block;
+  margin-top: 0.6%;
+	left: 0;
+	width: 0;
+	height: 1px;
+	background-color: #00010D;
+	content: "";
+	transition: width 0.3s ease-out;
+}
+.support1__3_1a1:hover:after ,
+.support1__3_1a1:focus:after  {
+	width: 100%;
+}
+.support1__3_1a2:after {
+	display: block;
+  margin-top: 0.6%;
+	left: 0;
+	width: 0;
+	height: 1px;
+	background-color: #00010D;
+	content: "";
+	transition: width 0.3s ease-out;
+}
+.support1__3_1a2:hover:after ,
+.support1__3_1a2:focus:after  {
+	width: 89%;
+}
+.support1__3_2a1:after {
+	display: block;
+  margin-top: 0.6%;
+	left: 0;
+	width: 0;
+	height: 1px;
+	background-color: #00010D;
+	content: "";
+	transition: width 0.3s ease-out;
+}
+.support1__3_2a1:hover:after ,
+.support1__3_2a1:focus:after  {
+	width: 85%;
+}
+.support1__3_2a2:after {
+	display: block;
+  margin-top: 0.6%;
+	left: 0;
+	width: 0;
+	height: 1px;
+	background-color: #00010D;
+	content: "";
+	transition: width 0.3s ease-out;
+}
+.support1__3_2a2:hover:after ,
+.support1__3_2a2:focus:after  {
+	width: 100%;
+}
+.support2__3_1a1:after {
+	display: block;
+  margin-top: 0.6%;
+	left: 0;
+	width: 0;
+	height: 1px;
+	background-color: #00010D;
+	content: "";
+	transition: width 0.3s ease-out;
+}
+.support2__3_1a1:hover:after ,
+.support2__3_1a1:focus:after  {
+	width: 67%;
+}
+.support2__3_1a2:after {
+	display: block;
+  margin-top: 0.6%;
+	left: 0;
+	width: 0;
+	height: 1px;
+	background-color: #00010D;
+	content: "";
+	transition: width 0.3s ease-out;
+}
+.support2__3_1a2:hover:after ,
+.support2__3_1a2:focus:after  {
+	width: 100%;
+}
+.support2__3_2a1:after {
+	display: block;
+  margin-top: 0.6%;
+	left: 0;
+	width: 0;
+	height: 1px;
+	background-color: #00010D;
+	content: "";
+	transition: width 0.3s ease-out;
+}
+.support2__3_2a1:hover:after ,
+.support2__3_2a1:focus:after  {
+	width: 56.5%;
+}
+.support2__3_2a2:after {
+	display: block;
+  margin-top: 0.6%;
+	left: 0;
+	width: 0;
+	height: 1px;
+	background-color: #00010D;
+	content: "";
+	transition: width 0.3s ease-out;
+}
+.support2__3_2a2:hover:after ,
+.support2__3_2a2:focus:after  {
+	width: 100%;
+}
+.support3__3 {
+  font-family: 'Scada', sans-serif;
+  color: #0D0D0D;
+  margin-top: 2em;
+}
+.support3__3_div_icons {
+  display: flex;
+  flex-direction: column;
+}
+.support3__3_div_icons a {
+  font-family: 'Scada', sans-serif;
+  margin-left: 1em;
+  color: #0D0D0D;
+  font-size: 200%;
+  letter-spacing: 0.03em;
+}
+.support3__3_div_icons i {
+  cursor: pointer;
+  font-size: 200%;
+}
+.banner_create_event_support {
+  margin-top: 6em;
+}
+/* ............ */
+.div_add_name div{
+  margin-top: 1.5em;
+	/* position:relative; */
+  /* margin-top:2em; */
+	/* margin-bottom:2em; */
+}
+.div_add_name label{
+  font-size: 150%;
+  font-family: 'Scada', sans-serif;
+  color: #0D0D0D;
+  font-weight: 600;
+}
+.div_add_name input{
+  margin-top: 1.5em;
+  border:1px solid #0D0D0D;
+  width:96.8%;
+  padding-left: 0.5em;
+  font-size:150%;
+  color:#0D0D0D;
+}
+
+.div_add_type {
+  display: flex;
+  flex-direction: column;
+}
+.div_add_type label {
+  font-family: 'Scada', sans-serif;
+  color: #0D0D0D;
+  font-size: 150%;
+  font-weight: 600;
+}
+.div_add_type select {
+  margin-top: 1.5em;
+  border: 1px solid #0D0D0D;
+  height: 1.5em;
+  width: 25%;
+  padding-left: 0.5em;
+  font-family: 'Scada', sans-serif;
+  color: #0D0D0D;
+  font-size: 120%;
+}
+.div_add_description div{
+	margin-top: 1.5em;
+}
+.div_add_description label{
+  font-size: 150%;
+  font-family: 'Scada', sans-serif;
+  color: #0D0D0D;
+  font-weight: 600;
+}
+.div_add_description textarea{
+  margin-top: 1.5em;
+  border:1px solid #0D0D0D;
+  width:96.8%;
+  padding-left: 0.5em;
+  font-size:150%;
+  color:#0D0D0D;
+  resize: none;
+  height: 5em;;
+}
+.div_add_comboes {
+  display: flex;
+  justify-content: space-between;
+}
+.div_add_comboes_1 {
+  width: 180%;
+}
+.div_add_comboes_2 {
+  width: 375%;
+}
+.div_add_date {
+  display: flex;
+  flex-direction: column;
+}
+.div_add_date label {
+  font-family: 'Scada', sans-serif;
+  color: #0D0D0D;
+  font-size: 150%;
+  font-weight: 600;
+}
+.div_add_date input {
+  margin-top: 1.7em;
+  font-family: 'Scada', sans-serif;
+  color: #0D0D0D;
+  border: 1px solid #0D0D0D;
+  width: 24.1%;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  font-size: 120%;
+}
+.div_add_additional {
+    margin-top: 1.5em;
+}
+.div_add_additional_label label {
+  font-family: 'Scada', sans-serif;
+  color: #0D0D0D;
+  font-size: 150%;
+  font-weight: 600;
+}
+.div_add_additional_form {
+  width: 100%;
+  border: 1px solid #0D0D0D;
+  font-family: 'Scada', sans-serif;
+  color: #0D0D0D;
+  font-size: 150%;
+  margin-top: 1.5em;
+}
+.div_add_additional_form label {
+  cursor: pointer;
+}
+.div_add_additional_form p {
+  margin-top: 1.4em;
+}
+.add_form_radio {
+  /* margin-top: 1.6em;
+  margin-left: 2em;
+  width: 0.7em;
+  height: 0.7em;
+  cursor: pointer;
+  border: 1px solid #0D0D0D; */
+}
+
+.div_add_additional_form_lvl_1 {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #c4c2c2;
+  font-weight: 500;
+  height: 4em;
+}
+
+.div_add_additional_form_lvl_1_1 {
+  flex:3;
+}
+.div_add_additional_form_lvl_1_1 div {
+  margin-top: 1.35em;
+}
+.div_add_additional_form_lvl_2_1 div {
+  margin-top: 1.35em;
+}
+.div_add_additional_form_lvl_3_1 div {
+  margin-top: 1.35em;
+}
+.div_add_additional_form_lvl_4_1 div {
+  margin-top: 1.35em;
+}
+
+.div_add_additional_form_lvl_1_2 {
+  flex: 1;
+}
+.div_add_additional_form_lvl_1_2 input {
+  /* display: none; */
+}
+.div_add_additional_form_lvl_1_3 {
+  flex:3
+}
+.div_add_additional_form_lvl_1_3 textarea {
+  resize: none;
+  width: 98.6%;
+  height: 3.8399em;
+  border-bottom: 1px solid #0D0D0D;
+  border-top: none;
+  border-left: 1px solid #0D0D0D;
+  border-right: none;
+}
+.div_add_additional_form_lvl_2 {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #c4c2c2;
+  font-weight: 500;
+}
+.div_add_additional_form_lvl_2_1 {
+  flex: 3;
+}
+.div_add_additional_form_lvl_2_2 {
+  flex: 1;
+}
+.div_add_additional_form_lvl_2_3 {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+}
+.div_add_additional_form_lvl_2_3 div {
+  margin-top: 0.3em;
+}
+/* .div_add_additional_form_lvl_2_3 {
+  margin-left: 2em;
+} */
+.div_add_additional_form_lvl_2_3_input_1 input {
+  margin-left: 0.5em;
+  border: 1px solid #0D0D0D;
+  width: 20%;
+}
+.div_add_additional_form_lvl_2_3_input_2 input {
+  margin-left: 0.4em;
+  border: 1px solid #0D0D0D;
+  width: 20%;
+}
+.div_add_additional_form_lvl_3 {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #c4c2c2;
+  font-weight: 500;
+}
+.div_add_additional_form_lvl_3_1 {
+  flex: 3;
+}
+.div_add_additional_form_lvl_3_2 {
+  flex: 1;
+}
+.div_add_additional_form_lvl_3_3 {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+}
+.div_add_additional_form_lvl_3_3 div {
+  margin-top: 0.4em;
+}
+.div_add_additional_form_lvl_3_3 input {
+  margin-left: 0.9em;
+  width: 0.7em;
+  height: 0.7em;
+  cursor: pointer;
+}
+.div_add_additional_form_lvl_4 {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #c4c2c2;
+  font-weight: 500;
+}
+.div_add_additional_form_lvl_4_1 {
+  flex: 3;
+}
+.div_add_additional_form_lvl_4_2 {
+  flex: 1;
+}
+.div_add_additional_form_lvl_4_3 {
+  flex: 3;
+}
+.div_add_tickets_form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1.5em;
+  height: 10.1em;
+  border: 1px solid #0D0D0D;
+  padding-left: 0.5em;
+  /* padding-right: 0.5em; */
+}
+.div_add_tickets_form_up {
+  display: flex;
+  justify-content: space-between;
+}
+.div_add_tickets_form_up_1 {
+  display: flex;
+  flex-direction: column;
+}
+.div_add_tickets_form_up_1 label {
+  margin-left: 4em;
+}
+.div_add_tickets_form_up_2 {
+  display: flex;
+  flex-direction: column;
+  margin-left: 5em;
+}
+.div_add_tickets_form_up_2 label {
+  margin-left: 0.5em;
+}
+.div_add_tickets_form_up_3 {
+  display: flex;
+  flex-direction: column;
+}
+.div_add_tickets_form_up_3 label {
+  margin-left: 1.8em;
+}
+.div_add_tickets_form_up_4 {
+  display: flex;
+  flex-direction: column;
+}
+.div_add_tickets_form_up_4 label {
+  margin-left: 6em;
+}
+.div_add_tickets_form_down_input_1 input {
+  margin-top: 1em;
+  border: 1px solid #0D0D0D;
+  width: 99.67%;
+  height: 50%;
+  font-size: 135%;
+  font-family: 'Scada', sans-serif;
+  color: #0D0D0D;
+}
+.div_add_tickets_form_down_input_2 input {
+  margin-top: 1em;
+  border: 1px solid #0D0D0D;
+  width: 45%;
+  height: 50%;
+  font-size: 135%;
+  margin-left: 1.5em;
+  font-family: 'Scada', sans-serif;
+  color: #0D0D0D;
+}
+.div_add_tickets_form_down_input_3 input {
+  margin-top: 1em;
+  border: 1px solid #0D0D0D;
+  width: 45%;
+  height: 50%;
+  font-size: 135%;
+  margin-left: 1.6em;
+  font-family: 'Scada', sans-serif;
+  color: #0D0D0D;
+}
+.div_add_tickets_form_down_input_4 textarea {
+  margin-top: 1em;
+  resize: none;
+  border: 1px solid #0D0D0D;
+  border-right: none;
+  /* border-left: none; */
+  border-bottom: none;
+  width: 98.9%;
+  height: 5em;
+  font-size: 135%;
+  /* margin-left: 1em; */
+  font-family: 'Scada', sans-serif;
+  color: #0D0D0D;
+}
+.div_add_tickets_form_up label {
+  font-family: 'Scada', sans-serif;
+  color: #0D0D0D;
+  font-size: 150%;
+}
+.add_tickets {
+  font-family: 'Scada', sans-serif;
+  color: #0D0D0D;
+  margin-top: 1.5em;
+}
+.add_tickets label {
+  font-family: 'Scada', sans-serif;
+  color: #0D0D0D;
+  font-size: 150%;
+}
+.add_tickets_label_main {
+  font-weight: 600;
+}
+.div_add_tickets_form_down {
+  display: flex;
+}
+.div_add_tickets_form_down input, textarea {
+  border: 1px solid #0D0D0D;
+}
+
+.add_adress label {
+  font-size: 150%;
+  font-family: 'Scada', sans-serif;
+  color: #0D0D0D;
+  font-weight: 500;
+}
+.add_adress input {
+  margin-top: 1.5em;
+  border: 1px solid #0D0D0D;
+  height: 1.5em;
+  width: 96.8%;
+  padding-left: 0.5em;
+  font-size: 150%;
+  font-family: 'Scada', sans-serif;
+  color: #0D0D0D;
+}
+.add_adress div {
+  margin-top: 1.5em;
+}
+.add_photo {
+  font-family: 'Scada', sans-serif;
+}
+.add_photo_1 {
+  margin-top: 1.5em;
+}
+.add_photo label {
+  margin-top: 1.5em;
+  font-size: 150%;
+  font-family: 'Scada', sans-serif;
+  color: #0D0D0D;
+  font-weight: 600;
+}
+.example-1 .form-group{/*padding:1em;margin:1em*/}
+.example-1 input[type=file]{outline:0;opacity:0;pointer-events:none;user-select:none}
+.example-1 .label{width:9.375em;border:2px dashed grey;display:block;padding:1.2em;transition:border 300ms ease;cursor:pointer;text-align:center}
+.example-1 .label i{display:block;font-size:42px;padding-bottom:16px}
+.example-1 .label i,.example-1 .label .title{color:grey;transition:200ms color}
+.example-1 .label:hover{border:2px solid #0D0D0D}
+.example-1 .label:hover i,.example-1 .label:hover .title{color:#0D0D0D}
+.add_deposite {
+  width: 100%;
+  font-family: 'Scada', sans-serif;
+  margin-top: 1.5em;
+}
+.add_deposite label {
+  font-family: 'Scada', sans-serif;
+  color: #0D0D0D;
+  font-size: 150%;
+  font-weight: 600;
+}
+.add_deposite p {
+  font-size: 1.375em;
+  letter-spacing: 0.03em;
+}
+.add_deposite_btn {
+  width: 14.500em;
+  height: 2.5em;
+  border: 1px solid #0D0D0D;
+  transition: 1s;
+  cursor: pointer;
+  text-align: center;
+  padding-top: 1%;
+}
+.add_deposite_btn a {
+  color: #0D0D0D;
+  text-decoration: none;
+  font-size: 170%;
+  font-family: 'Scada', sans-serif;
+  margin: auto;
+}
+.add_deposite_btn:hover {
+  background-color: rgba(240, 239, 239, 100);
+}
+.div_add_tickets_form_buttons {
+  display: flex;
+  justify-content: space-between;
+}
+.div_add_tickets_form_buttons_left {
+  height: 3em;
+  width: 14.5em;
+  border: 1px solid #0D0D0D;
+  border-top: none;
+  cursor: pointer;
+  transition: 1s;
+  position: relative;
+}
+.div_add_tickets_form_buttons_left:hover {
+  background-color: rgba(240, 239, 239, 100);
+}
+.div_add_tickets_form_buttons_left a {
+  color: #0D0D0D;
+  text-decoration: none;
+  font-size: 170%;
+  font-family: 'Scada', sans-serif;
+  position: absolute;
+  left: 2.3em;
+  top: 0.35em;
+}
+.div_add_tickets_form_buttons_right {
+  height: 3em;
+  width: 14.5em;
+  border: 1px solid #0D0D0D;
+  border-top: none;
+  cursor: pointer;
+  transition: 1s;
+  position: relative;
+}
+.div_add_tickets_form_buttons_right:hover {
+  background-color: rgba(240, 239, 239, 100);
+}
+.div_add_tickets_form_buttons_right a {
+  color: #0D0D0D;
+  text-decoration: none;
+  font-size: 170%;
+  font-family: 'Scada', sans-serif;
+  position: absolute;
+  left: 2.3em;
+  top: 0.35em;
+}
+
+
+
+
+
+
+
+/* ///////////// */
+.contacts_main {
+  display: flex;
+}
+.contacts_main_left {
+  /* font-size: 150%; */
+  font-family: 'Scada', sans-serif;
+  /* display: flex; */
+  width: 30%;
+  margin-top: 2.3em;
+}
+.contacts_main_left_2 {
+  display: flex;
+}
+.contacts_main_left_number label {
+   font-size: 150%;
+  margin-left: 1em;
+  margin-top: 0.5em;
+  cursor: pointer;
+}
+.contacts_main_left_icons i {
+  margin-top: 0.5em;
+  font-size: 160%;
+  cursor: pointer;
+}
+.contacts_main_left_icons {
+  display: flex;
+  flex-direction: column;
+}
+.contacts_main_left_number {
+  letter-spacing: 0.05em;
+  display: flex;
+  flex-direction: column;
+}
+.div_short_desc {
+  font-family: 'Scada', sans-serif;
+}
+.div_short_desc p {
+  font-size: 1.4em;
+  letter-spacing: 0.03em;
+}
+.contacts_main_right {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  margin-top: 2.3em;
+  font-family: 'Scada', sans-serif;
+}
+.contacts_adress {
+  display: flex;
+}
+.contacts_adress a {
+  cursor: pointer;
+  text-decoration: none;
+  margin-left: 1em;
+  margin-top: 1.3em;
+  font-size: 120%;
+  font-family: 'Scada', sans-serif;
+}
+.footer_event_create {
+  margin-top: 1.5em;
+}
+/* ..............
+ */
+.acc_top_1__3_mrg {
+  margin-top: 0.5em;
+  height: 16.5em;
+}
+.acc_top_1__3_img_del a {
+  display: none;
+}
+.acc_top_1__3_info_del a {
+  display: none;
+}
+.acc_cards {
+  font-family: 'Scada', sans-serif;
+}
+.main_card_div_action_buy_acc_lookup {
+  margin-left: 1em;
+}
+/* .............. */
+
+
+.report_cards_form {
+  border: 1px solid #0D0D0D;
+  width: 20em;
+  height: 12em;
+  cursor: pointer;
+  font-family: 'Scada', sans-serif;
+  transition: 0.5s;
+}
+.report_cards_form:hover {
+  background-color: rgba(240, 239, 239, 100);
+  transition: 0.5s;
+}
+.report_cards_line_1 {
+  display: flex;
+  justify-content: space-between;
+}
+.report_cards_line_1_status {
+  display: flex;
+  flex-direction: column;
+}
+.report_cards_line_1_status h2 {
+  margin: auto;
+}
+.report_cards_line_1_status a {
+  color: #0D0D0D;
+  font-size: 150%;
+  margin: auto;
+}
+.report_cards_line_1_status_date {
+  margin-top: 1em;
+  /* margin-left: 0.2em; */
+}
+.report_cards_line_1_bought h2 {
+  margin-left: 18%;
+}
+.report_cards_line_1_bought a {
+  color: #0D0D0D;
+  font-size: 150%;
+  margin-left: 30%;
+  /* margin: auto; */
+}
+.report_cards_line_1_sold h2 {
+  margin-left: 1.5em;
+}
+.report_cards_line_1_sold a {
+  color: #0D0D0D;
+  font-size: 150%;
+  margin-left: 5em;
+}
+.report_cards_line_2_return h2 {
+  margin-left: 1.3em;
+}
+.report_cards_line_2_return a {
+  color: #0D0D0D;
+  font-size: 150%;
+  margin-left: 5.8em;
+}
+.report_cards_line_2 {
+  margin-top: 2em;
+}
+.footer_report {
+  margin-top: 15em;
+}
+@media (max-width:1200px) {
+  .main_container {
+    max-width: 970px;
+  }
+  .report_cards_form {
+    width: 30%;
+  }
+  .support2__3_2 {
+    margin-left: 45%;
+  }
+  .support1__3_2 {
+    margin-left: 31.5%
+  }
+  .Header {
+    max-width: 970px;
+  }
+  .HeaderLogo a {
+    font-size: 155%;
+  }
+  .livesearch {
+    max-width: 6em;
+    font-size: 100%;
+  }
+  .searchinput {
+    max-width: 60%;
+  }
+  .searchbutton {
+    max-width: 60%;
+  }
+  .HeaderNavigation a {
+    font-size: 110%;
+    /* margin-top: 5em; */
+  }
+  .Events {
+    margin: 14%  auto auto auto;
+  }
+  .Support {
+    margin: 14%  auto auto auto;
+  }
+  .Enter {
+    margin: 14%  auto auto auto;
+  }
+  .Footer {
+    max-width: 970px;
+  }
+  .banner_create_event {
+    max-width: 970px;
+  }
+  .name_links {
+    font-size: 140%;
+  }
+  .main_card_date_place_links {
+    font-size: 110%;
+  }
+  .main_card_btn_buy {
+    font-size: 100%;
+  }
+  .btn_load_more {
+    font-size: 120%;
+  }
+  .LogoLink {
+    font-size: 155%;
+  }
+  .footer_middleside_nav a {
+    font-size: 100%;
+  }
+  .footer_media_links a {
+    font-size: 90%;
+  }
+  .footer_middleside_nav {
+    padding-right: 0.5em;
+  }
+  .slider__item_name {
+    grid-area: 20/1/22/4;
+    font-size: 110%;
+  }
+  .slider__item_date__place {
+    margin-left: 6%;
+    grid-area: 22/1/24/4;
+    font-size: 110%;
+  }
+  .slider__item_action {
+    margin-right: 5%;
+    grid-area: 20/7/22/9;
+  }
+  /* .btn {
+    display: block;
+    font-weight: 600;
+    text-align: center;
+    white-space: nowrap;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 1px solid #969696;
+    border-radius: 3px;
+    padding: .375rem .75rem;
+    font-size: 1.3rem;
+    line-height: 1.5;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0.2);
+    text-decoration: none;
+  } */
+  .breadcrumbs {
+    font-size: 50%;
+  }
+  .event_lookup_img_under {
+    width: 30%;
+  }
+  .map_ret {
+    width: 100%;
+  }
+  .event_lookup_icons_description span {
+    font-size: 80%;
+  }
+  .organisator_form {
+    height: 8em;
+  }
+  .organisator_form div:nth-child(2) {
+    font-size: 90%;
+  }
+  .review_form {
+    height: 15em;
+  }
+  .main_card_img_info {
+    padding-right: 5%;
+  }
+  .event_lookup_buttons_top {
+    width: 100%;
+  }
+  .event_cancel_btn a {
+    font-size: 140%;
+  }
+  .event_cancel_btn {
+    height: 2em;
+    width: 25%;
+  }
+}
+@media (max-width:907px) {
+  .div_main_card1 {
+    padding-bottom: 2%;
+  }
+}
+@media (min-width:900px) {
+  .main_cards_line_2 {
+    display: none;
+  }
+  .div_main_card1_sim {
+    display: none;
+  }
+}
+@media (max-width:900px) {
+  .div_change_user_info select {
+    width: 100%;
+    height: 1.6em;
+    margin: 1.2em auto;
+    text-align: center;
+  }
+  .div_change_user_info input {
+    width: 100%;
+    height: 1.6em;
+    margin: 1.2em auto;
+    text-align: center;
+  }
+  .event_create_wrapper2 {
+    width: 100%;
+  }
+  .event_type_div_my_events {
+    width: 18%;
+  }
+  .div_filter_deposite {
+    width: 21%;
+  }
+  .support1__3_1a2 {
+    margin-top: 0.5em;
+  }
+  .support1__3_2a2 {
+    margin-top: 1.5em;
+  }
+  .support2__3_1a2 {
+    margin-top: 0.5em;
+  }
+  .support2__3_2a2 {
+    margin-top: 0.5em;
+  }
+  .support1__3_2 {
+    margin-left: 24.5%;
+  }
+  .report_cards_form {
+    width: 31%;
+  }
+  .report_cards_form a {
+    margin-left: 30%;
+  }
+  .report_cards_line_1_status h2 {
+    margin-left: 35%;
+  }
+  /* .rep_h1 h1 {
+    font-size: 130%;
+  } */
+  .auth_cont {
+    margin-top: 38%;
+  }
+  .auth_cont_reg {
+    margin-top: 38%;
+  }
+  .acc_top_2__3 a {
+    font-size: 130%;
+  }
+  /* .stars h2 {
+    font-size: 110%
+  } */
+  .rating {
+    font-size: 250%;
+    margin: auto;
+  }
+  .rating a:nth-child(1) {
+    margin-right: 15%;
+  }
+  .div_add_comboes_1 select {
+    width: 38%;
+  }
+  .create_main_label label {
+    font-size: 100%;
+  }
+  .main_container {
+    max-width: 670px;
+  }
+  .Header {
+    max-width: 670px;
+    height: 3em;
+  }
+  .Footer {
+    max-width: 670px;
+  }
+  .banner_create_event {
+    max-width: 670px;
+  }
+  .HeaderLogo a {
+    font-size: 125%;
+  }
+  .livesearch {
+    margin-left: 1.5em;
+    max-width: 5.5em;
+    font-size: 80%;
+  }
+  .searchinput {
+    max-width: 50%;
+    height: 30%;
+    font-size: 80%;
+  }
+  .searchbutton {
+    max-width: 40%;
+    height: 100%;
+  }
+  .searchbutton::before {
+    font-size: 90%;
+  }
+  .HeaderNavigation a {
+    font-size: 90%;
+  }
+  .Events {
+    margin: 11%  auto auto auto;
+  }
+  .Support {
+    margin: 11%  auto auto auto;
+  }
+  .Enter {
+    margin: 11%  auto auto auto;
+  }
+  /* .h1style {
+    font-size: 130%;
+  } */
+  .div_main_card1_900 {
+    display: none;
+  }
+  .HeaderSearch {
+    width: 40%;
+  }
+  .Footer {
+    max-width: 670px;
+    height: 6em;
+  }
+  .banner_create_event {
+    max-width: 670px;
+    font-size: 120%;
+  }
+  .name_links {
+    font-size: 140%;
+  }
+  .main_card_date_place_links {
+    font-size: 110%;
+  }
+  .main_card_btn_buy {
+    font-size: 100%;
+  }
+  .btn_load_more {
+    /* font-size: 90%; */
+    /* width: 100%; */
+  }
+  .LogoLink {
+    font-size: 125%;
+  }
+  .footer_middleside_nav a {
+    font-size: 80%;
+    margin: 2em auto auto 2em;
+  }
+
+  .footer_media_links a {
+    font-size: 70%;
+    margin-right: 0.5em;
+  }
+  .footer_middleside_nav {
+    padding-right: 0.5em;
+  }
+  .main_cards_line_2 {
+    display: flex;
+    justify-content: space-between;
+  }
+  .div_main_card1 {
+      width: calc(1/2*100% - (1 - 1/3)*10px);
+      height: 18em;
+  }
+  .main_filter  {
+    width: 65%;
+  }
+  .main_filter div {
+    height: 60%;
+  }
+  .div_expected_cards {
+    height: auto;
+  }
+  .date_picker_div {
+    font-size: 105%;
+  }
+  .slider__item_name {
+    grid-area: 20/1/22/4;
+    font-size: 110%;
+  }
+  .slider__item_date__place {
+    margin-left: 6%;
+    grid-area: 22/1/24/4;
+    font-size: 110%;
+  }
+  .slider__item_action {
+    margin-right: 30%;
+    grid-area: 20/5/22/7;
+  }
+  /* .btn {
+    display: block;
+    font-weight: 600;
+    text-align: center;
+    white-space: nowrap;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 1px solid #969696;
+    border-radius: 3px;
+    padding: .375rem .75rem;
+    font-size: 1.3rem;
+    line-height: 1.5;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0.2);
+    text-decoration: none;
+  } */
+  .breadcrumbs {
+    font-size: 20%;
+  }
+  .event_lookup_img_main {
+    height: 18em;
+  }
+  .event_lookup_img_under {
+    height: 10em;
+  }
+  .event_lookup_description p {
+    font-size: 130%;
+  }
+  /* .about_h1_icons h1 {
+    font-size: 130%;
+  } */
+  /* .event_lookup_description h2 {
+    font-size: 110%;
+  } */
+  .event_about_icons {
+    font-size: 90%;
+  }
+  .event_about_icons div {
+    margin: 0;
+  }
+  .event_lookup_icons_description1 {
+    font-size: 80%;
+  }
+  .event_lookup_icons_description2 {
+    font-size: 80%;
+  }
+  /* .event_lookup_organisation h2 {
+    font-size: 110%;
+  } */
+  /* .event_location h2 {
+    font-size: 120%;
+  } */
+  .event_location_current a {
+    font-size: 110%;
+  }
+  /* .reviews_h2 h2 {
+    font-size: 110%;
+  } */
+  .reviews_btn_left_comment {
+    /* width: 14em; */
+    height: 2.5em;
+    font-size: 100%;
+  }
+  .ticket_return_button_bottom_btn {
+    /* width: 12.8em; */
+    height: 2.5em;
+    font-size: 100%;
+  }
+  .review_form_accinfo {
+    height: 100%;
+  }
+  .review_form_accinfo img {
+    height: 60%;
+    margin-top: 1em;
+  }
+  .review_form {
+    height: 13em;
+  }
+  .reviews_pagination {
+    font-size: 90%;
+  }
+  .review_sam p {
+    font-size: 120%;
+  }
+  /* .simillar_events h2 {
+    font-size: 120%;
+  } */
+  /* .event_about_h1 h1 {
+    font-size: 130%;
+  } */
+  .event_about_icons i {
+    /* font-size: 2em; */
+  }
+  .div_buy_ticket1 {
+    height: 6em;
+  }
+  .div_buy_ticket2 {
+    height: 6em;
+  }
+  .ticket_description p {
+    font-size: 113%;
+  }
+  .ticket_name h2 {
+    font-size: 110%;
+  }
+  .ticket_btn_buy a {
+    font-size: 120%;
+  }
+  .ticket_name {
+    padding-top: 3%;
+  }
+  .ticket_btn_buy {
+    padding-top: 5%;
+  }
+  /* .div_short_desc h2 {
+    font-size: 120%;
+  } */
+  .div_short_desc p {
+    font-size: 140%;
+  }
+  /* .support1__3 h2 {
+    font-size: 110%;
+  } */
+  /* .support1__3 a {
+    font-size: 110%;
+  } */
+  /* .support2__3 h2 {
+    font-size: 110%;
+  } */
+  /* .support2__3 a {
+    font-size: 110%;
+  } */
+  /* .support3__3 h2 {
+    font-size: 110%;
+  } */
+  .support2__3_2 {
+    margin-left: 45%;
+  }
+  .support3__3_div_icons {
+    font-size: 80%;
+  }
+  .date_picker_my_tickets {
+    height: 95%;
+    width: 11em;
+  }
+  .searchbutton_my_tickets {
+    width: 10%;
+  }
+  .Ticketsinput {
+    width: 80%;
+  }
+  .main_card_img_info div {
+    height: 20%;
+    width: 60%;
+    /* font-size: 100%; */
+  }
+  .main_card_img_info div>a {
+    font-size: 120%;
+  }
+  .reviews_pagination_creator {
+    margin-left: 18%;
+    }
+  .reviews_pagination_creator a {
+    font-size: 180%;
+  }
+  /* .my_tickets_cards h2 {
+    font-size: 120%;
+  } */
+  .event_create {
+    width: 40%;
+    height: 2em;
+  }
+  .event_create a {
+    font-size: 145%;
+  }
+  .event_lookup_buttons_top div {
+    width: 25%;
+    height: 1em;
+    padding-bottom: 2%;
+  }
+  .event_lookup_buttons_top div>a {
+    font-size: 140%;
+  }
+  .event_cancel_btn a {
+    font-size: 120%;
+  }
+  .event_cancel_btn {
+    height: 1.5em;
+    width: 33%;
+  }
+  .event_lookup_buttons_bottom {
+    width: 100%;
+  }
+  .event_lookup_buttons_bottom div {
+    width: 12.5em;
+    height: 2.3em;
+  }
+  .event_lookup_buttons_bottom div>a {
+    font-size: 130%;
+  }
+  /* .contacts_main_left h2 {
+    font-size: 110%;
+  } */
+  /* .contacts_adress h2 {
+    font-size: 110%;
+  } */
+  .contacts_adress a {
+    font-size: 115%;
+  }
+  .label_font {
+    font-size: 120%;
+  }
+  .acc_top_1__3_img img {
+    height: 70%;
+    width: 70%;
+  }
+  .acc_top_1__3_rank_circle {
+    width: 5em;
+    height: 5em;
+  }
+  .acc_top_1__3_rank_circle a {
+    font-size: 95%;
+  }
+  .acc_top_1__3_info p {
+    font-size: 130%;
+  }
+  .acc_top_1__3 {
+    height: 11.5em;
+  }
+  /* .acc_cards h2 {
+    font-size: 110%;
+  } */
+  .acc_top_1__3_img a {
+    font-size: 130%;
+    margin-left: 8%;
+  }
+  .btn_load_more {
+    font-size: 85%;
+  }
+}
+@media (max-width:670px) {
+  .support1__3_2 {
+    margin-left: 30%;
+  }
+}
+@media (max-width:650px) {
+  .HeaderSearch {
+    width: 30%;
+  }
+  .support2__3_2 {
+    margin-left: 47%;
+  }
+  /* .support1__3 a {
+    font-size: 100%;
+  } */
+  /* .support2__3 a {
+    font-size: 100%;
+  } */
+  .searchinput {
+    max-width: 97%;
+    height: 30%;
+    font-size: 70%;
+  }
+  .searchbutton {
+    max-width: 40%;
+    height: 100%;
+  }
+  .searchbutton::before {
+    font-size: 90%;
+  }
+  .livesearch {
+    margin-left: 1.5em;
+    max-width: 6em;
+    font-size: 70%;
+  }
+  .Events {
+    margin: 10%  auto auto auto;
+  }
+  .Support {
+    margin: 10%  auto auto auto;
+  }
+  .Enter {
+    margin: 10%  auto auto auto;
+  }
+  .name_links {
+    font-size: 135%;
+  }
+  .Footer {
+    max-width: 670px;
+    height: 7em;
+  }
+  .btn_load_more {
+    font-size: 85%;
+    /* width: 100%; */
+  }
+  .date_picker_div {
+    font-size: 105%;
+  }
+  .footer_middleside_nav a {
+    font-size: 80%;
+    margin: 2.5em auto auto 0.5em;
+  }
+
+  .footer_media_links a {
+    font-size: 70%;
+    margin-right: 0.5em;
+  }
+  .footer_middleside_nav {
+    padding-right: 0.5em;
+  }
+  .slider__item_action {
+    margin-right: 50%;
+    /* grid-area: 20/5/22/7; */
+  }
+  .event_lookup_buttons_top div>a {
+    font-size: 120%;
+  }
+  .contacts_main_left_icons i {
+    font-size: 130%;
+  }
+  .contacts_main_left_number label {
+    font-size: 115%;
+    letter-spacing: 0.07em;
+  }
+  .map_100 {
+    height: 30em;
+  }
+}
+@media (min-width:599px) {
+  .Header_mobile {
+    display: none;
+  }
+  select {
+    background-color: #fff;
+  }
+}
+@media (max-width:600px) {
+  .acc_top_1__3_img img {
+    width: 90%;
+    height: 50%;
+  }
+  .div_add_tickets_form_down_input_1 input {
+    border-right: none;
+    border-left: none;
+  }
+  .div_add_tickets_form_down_input_4 textarea {
+    border-right: none;
+    border-left: none;
+  }
+  .rep_h1 {
+    margin-top: 2%;
+  }
+  .section_filter {
+    margin-top: 2%;
+  }
+  .ticket_description p {
+    font-size: 100%;
+  }
+  .event_lookup_images {
+    margin-top: 2%;
+  }
+  .div_add_tickets_form_buttons_left a {
+    left: 1.6em;
+  }
+  .div_add_tickets_form_buttons_right a {
+    left: 2em;
+  }
+  .div_add_additional_form {
+    display: flex;
+    flex-direction: column;
+  }
+  .div_add_additional_form_lvl_1 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 10em;
+  }
+  .div_add_additional_form_lvl_1_2 {
+    height: 25%;
+  }
+  .div_add_additional_form_lvl_1_1 div>label {
+    margin: auto 27% auto 42%;
+  }
+  .div_add_additional_form_lvl_1_2 input {
+    margin: 5% 50% auto 50%;
+  }
+  .div_add_additional_form_lvl_1_3 textarea {
+    height: 96%;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+    border-top: 1px solid #0D0D0D;
+  }
+  .div_add_additional_form_lvl_1_1 div {
+    margin-top: 1em;
+  }
+  .div_add_additional_form_lvl_1_1 {
+    height: 25%;
+  }
+  .div_add_additional_form_lvl_1_3 {
+    height: 50%;
+  }
+  .div_add_additional_form_lvl_2 {
+    border-top: 1px solid #0D0D0D;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 10em;
+  }
+  .div_add_additional_form_lvl_2_2 {
+    height: 25%;
+  }
+  .div_add_additional_form_lvl_2_1 {
+    height: 20%;
+  }
+  .div_add_additional_form_lvl_2_3 {
+    height: 55%;
+  }
+  .add_form_radio {
+    /* margin: 5% 50% auto 50%; */
+  }
+  .div_add_additional_form_lvl_2_1 div {
+    margin-top: 1.5em;
+  }
+  .age_class {
+    margin: auto auto auto 25%;
+  }
+  .div_add_additional_form_lvl_2_3_input_1 span {
+    margin-left: 33%;
+  }
+  .div_add_additional_form_lvl_2_3_input_2 span {
+    margin-left: 33%;
+  }
+  .div_add_additional_form_lvl_3 {
+    border-top: 1px solid #0D0D0D;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 10em;
+  }
+  .gender_class {
+    margin-left: 44%;
+  }
+  .div_add_additional_form_lvl_3_1 div {
+    margin-top: 1em;
+  }
+  .div_add_additional_form_lvl_3_3_radio_1 label {
+    margin-left: 43%;
+  }
+  .div_add_additional_form_lvl_3_3_radio_2 label {
+    margin-left: 43%;
+  }
+  .div_add_additional_form_lvl_4 {
+    border-top: 1px solid #0D0D0D;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 10em;
+  }
+  .cost_inside {
+    margin-left: 32%;
+  }
+  .breadcrumbs {
+    margin-top: 2%;
+  }
+  .reviews_btn_left_comment {
+    width: 100%;
+  }
+  .reviews_pagination_all_acc {
+    margin-top: 3%;
+  }
+  .main_container {
+    padding: 0 5px 0 5px;
+  }
+  .report_cards_line_1_bought  {
+    margin-top: 2em;
+  }
+  .report_cards_line_1_bought h2 {
+    margin-left: 25%;
+  }
+  .report_cards_line_1_bought a {
+    margin-left: 32%;
+  }
+  .report_cards_line_1_sold h2 {
+    margin-left: 25%;
+  }
+  .report_cards_line_1_sold a {
+    margin-left: 35%;
+  }
+  .report_cards_line_2_return h2 {
+    margin-left: 24%;
+  }
+  .report_cards_line_2_return a {
+    margin-left: 40%;
+  }
+  .report_cards_line_1_sold  {
+    margin-top: 2em;
+  }
+  .report_cards_line_1 {
+    flex-direction: column;
+  }
+  .report_cards_line_1 div {
+    width: 100%;
+  }
+  .report_cards_line_2 div {
+    width: 100%;
+  }
+  .auth_cont {
+    margin-top: 45%;
+  }
+  .auth_cont_reg {
+    margin-top: 45%;
+  }
+  select {
+    background-color: #fff;
+  }
+  .support2__3_2 {
+    margin-left: 55%;
+  }
+  .Header {
+    display: none;
+  }
+  .Events {
+    display: none;
+  }
+  .Support {
+    display: none;
+  }
+  .Enter {
+    display: none;
+  }
+/* CONTAINER */
+
+.container {
+    /* width: 80%; /* takes up 80% of header(parent element) */ 
+    /* margin: auto; /* adjusts itself horizontally and vertically */ 
+    /* overflow: hidden;/* If the content overflows its container, it will be hidden behind its border */ 
+}
+
+/* HEADER */
+#main-header {
+    background: #F5F4F4;
+    text-align: center;
+    position: relative;; /* sticks to the top of the page, regardless of where you scroll */
+    /* margin-bottom: 50px; */
+    width: 100%;
+    z-index: 999; /* puts itself on top of all other elements on the page */
+    padding: 0.4em 0;
+}
+/* LOGO - the h1 */
+#logo {
+    color: #0D0D0D;
+    align-self: center;
+    font-weight: 500;
+}
+#logo a{
+  font-family: 'Scada', sans-serif;
+    text-decoration: none;
+    color: #0D0D0D;
+}
+/* hiding the checkbox */
+.nav-toggle {
+    display: none;
+}
+/* STYLING/POSITIONING THE HAMBURGER MENU */
+.nav-toggle-label {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-right: 1em;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+    display: block;
+    background: #0D0D0D;
+    height: 3px;
+    width: 30px;
+    border-radius: 2px;
+    position: relative;
+    transition: all .5s ease-in-out;
+}
+
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+    content: '';
+    position: absolute;
+}
+
+.nav-toggle-label span::before {
+    bottom: 10px;
+}
+.nav-toggle-label span::after {
+    top: 10px;
+}
+
+#nav-toggle:checked ~ .nav-toggle-label span {
+    background: #0D0D0D; /* setting it to the same background as header so it "disappears" */
+}
+
+/* transforming the before and after span into an X */
+#nav-toggle:checked ~ .nav-toggle-label span::before {
+    transform: rotate(45deg);
+    bottom: 0;
+    background: #0D0D0D;
+}
+
+#nav-toggle:checked ~ .nav-toggle-label span::after {
+    transform: rotate(-45deg);
+    top: 0;
+    background: #0D0D0D;
+}
+
+#menu {
+    position: absolute;
+    background-color: rgba(240, 239, 239, 100);
+    text-align: right;
+    top: 100%; /* puts itself directly under the preceeding relative positioned element */
+    left: 0;
+    width: 100%;
+    transform: scale(1, 0);
+    transform-origin: top; /* menu appears from the top instead if center, try and comment this out and see for yourself */
+    transition: transform .4s ease-in-out;
+}
+
+#menu ul {
+    list-style: none;
+}
+
+#menu li {
+    padding: 20px 10px;
+}
+
+#menu a {
+    font-family: 'Scada', sans-serif;
+    text-decoration: none;
+    color: #0D0D0D;
+    font-size: 18px;
+    text-transform: uppercase;
+    opacity: 0;
+    transition: opacity .15s ease-in-out;
+}
+
+#menu a:hover {
+}
+
+#nav-toggle:checked + #menu {
+    transform: scale(1, 1);
+}
+#nav-toggle:checked ~ #menu a {
+    opacity: 1;
+    transition: opacity .25s ease-in-out .35s;
+}
+
+.div_expected_cards {
+  display: flex;
+  flex-direction: column;
+}
+.div_main_card1 {
+  width: 100%;
+  height: 20em;
+}
+.main_card_img {
+  height: 70%;
+}
+.name_links {
+  font-size: 150%;
+}
+.main_card_div_action_buy {
+  padding-bottom: 5%;
+}
+.main_card_div_action_price {
+  padding-bottom: 5%;
+}
+.main_cards_line_2 {
+  display: flex;
+  flex-direction: column;
+}
+/* .main_cards {
+  display: flex;
+  flex-direction: column;
+} */
+.maincards2 {
+  display: flex;
+  flex-direction: column;
+}
+.maincards3 {
+  display: flex;
+  flex-direction: column;
+}
+.main_filter {
+  width: 100%;
+  height: 4em;
+}
+.div2_btn_load_more {
+  /* font-size: 100%; */
+  width: 100%;
+  padding: 0;
+}
+.footer_middleside_nav {
+  display: none;
+}
+body div {
+  transition: 0.5s;
+}
+.footer_rightside {
+  display: flex;
+  flex-direction: row;
+}
+.footer_middleside_nav {
+  font-size: 100%;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+.footer_media_links {
+  font-size: 190%;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin: 0 0 0 0;
+}
+.Footer {
+  height: 13.2em;
+}
+.slider_div {
+  height: 20em;
+}
+.slider__item_name {
+  grid-area: 13/1/15/4;
+  font-size: 110%;
+}
+.slider__item_date__place {
+  margin-left: 6%;
+  grid-area: 15/1/17/4;
+  font-size: 110%;
+}
+.slider__item_action {
+  margin-right: 60%;
+  grid-area: 13/5/15/7;
+  font-size: 90%;
+}
+/* .btn {
+  display: block;
+  font-weight: 600;
+  text-align: center;
+  white-space: nowrap;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border: 1px solid #969696;
+  border-radius: 3px;
+  padding: .375rem .75rem;
+  font-size: 1.3rem;
+  line-height: 1.5;
+  transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.2);
+  text-decoration: none;
+} */
+.searchinput {
+  height: 2em;
+  font-size: 80%;
+}
+.searchbutton {
+  height: 1.81em;
+}
+.li1 {
+  margin-right: 2em;
+}
+.breadcrumbs a{
+  font-size: 100%;
+  /* padding-right: 1em; */
+}
+.div_main_card1_return {
+  width: 49%;
+}
+.main_card_name a {
+  font-size: 120%;
+}
+.div_expected_cards_line_2 {
+  display: none;
+}
+.div_main_card1_900 {
+  display: block;
+}
+/* .div_expected_cards_ret {
+  display: flex;
+  flex-direction: column;
+} */
+.div_expected_cards_line_1 {
+  flex-direction: column;
+}
+.div_main_card1_return {
+  width: 100%;
+}
+.review_form_accinfo img {
+  height: 50%;
+}
+.review_form_accinfo a {
+  font-size: 95%;
+}
+.support2__3_2 {
+  margin-left: 56%;
+}
+.show_much {
+  display: none;
+}
+.my_tickets_cards_top {
+  flex-direction: column;
+}
+.my_tickets_cards_bottom {
+  flex-direction: column;
+}
+.searchbutton_my_tickets {
+  height: 100%;
+  width: 18%;
+}
+.my_tickets_cards_bottom {
+  margin-top: 0;
+}
+.event_type_div_my_tickets {
+  width: 11em;
+    height: 1.5em;
+    /* margin-top: 1em;
+    margin: auto; */
+    margin: 1em auto 0 auto;
+}
+.date_picker_div_my_tickets {
+  width: 10.31em;
+  /* width: 11em; */
+    height: 1.5em;
+      margin: 1em auto 0 auto;
+    /* margin-top: 1em;
+    margin: auto; */
+}
+.date_picker_my_tickets {
+  padding-left: 0;
+  margin-top: 0.5em;
+}
+.TicketsSearch {
+  width: 11em;
+  margin: 1em auto 0 auto;
+    /* height: 1.5em; */
+    /* margin-top: 1em;
+    margin: auto; */
+}
+.Ticketsinput {
+  /* margin-top: 10%; */
+  font-size: 80%;
+}
+.searchbutton_my_tickets {
+  /* height: 63%; */
+  /* margin-top: 10%; */
+}
+.div_filter_deposite {
+  /* margin-top: 0.5em; */
+  margin: 1em auto 0 auto;
+}
+.event_create {
+  margin-top: 1em;
+  width: 100%;
+  /* height: 1.8em; */
+}
+.event_create a {
+  /* font-size: 115%; */
+}
+.event_lookup_buttons_top div>a {
+  font-size: 110%;
+}
+.event_cancel_btn a {
+  font-size: 100%;
+}
+.event_cancel_btn {
+  height: 1.5em;
+  width: 30%;
+}
+.div_add_additional_form label, span {
+  font-size: 80%;
+}
+.div_add_additional_form label {
+  /* margin-top: 1em; */
+}
+.div_add_tickets_form_up_1 {
+  padding-top: 3%;
+}
+.div_add_tickets_form_up_2 {
+  padding-top: 3%;
+}
+.div_add_tickets_form_up_3 {
+  padding-top: 3%;
+}
+.div_add_tickets_form_up_4{
+  padding-top: 3%;
+}
+.div_add_tickets_form_buttons_left {
+  width: 35%;
+}
+.div_add_tickets_form_buttons_left a {
+  font-size: 125%;
+}
+.div_add_tickets_form_buttons_right {
+  width: 35%;
+}
+.div_add_tickets_form_buttons_right a {
+  font-size: 125%;
+}
+.div_add_tickets_form_up {
+  display: flex;
+  flex-direction: column;
+}
+.div_add_tickets_form {
+  height: 100%;
+  padding: 0;
+}
+.div_add_tickets_form_up label {
+  margin-left: 45%;
+}
+.div_add_tickets_form_up_2 {
+  margin-left: 0;
+}
+.div_add_tickets_form_down_input_2 input {
+  width: 30%;
+  margin-left: 43%;
+}
+.div_add_tickets_form_down_input_3 input {
+  width: 30%;
+  margin-left: 43%;
+}
+.reviews_pagination a {
+  font-size: 150%;
+}
+.menu_section a {
+  font-size: 135%;
+}
+.acc_top_1__3_info  {
+  padding: 0 0 0 0.5em;
+}
+.acc_top_1__3_info p {
+  font-size: 100%;
+}
+.acc_top_1__3_img a {
+  font-size: 110%;
+  /* margin-left: 8%; */
+}
+.div2_btn_load_more {
+  font-size: 150%;
+}
+.banner_create_event {
+  margin-top: 4%;
+}
+.support1__3 {
+  flex-direction: column;
+}
+/* .support1__3_1 {
+  margin-left: 20%;
+}*/
+ .support1__3_2 {
+  margin-left: 0;
+}
+.support2__3 {
+  flex-direction: column;
+}
+ /* .support2__3_1 {
+  margin-left: 20%;
+} */
+.support2__3_2 {
+  margin-left: 0;
+}
+.event_lookup_buttons_top {
+  flex-direction: column;
+}
+.event_lookup_buttons_top div {
+  width: 45%;
+  margin: auto;
+}
+.event_lookup_buttons_top div:nth-child(2)
+{
+  margin-top: 3%;
+}
+.event_lookup_buttons_top div:nth-child(3)
+{
+  margin-top: 3%;
+}
+}
+@media (max-width:590px) {
+  /* .support2__3_2 {
+    margin-left: 52%;
+  } */
+  .main_filter_my_tickets  {
+    flex-direction: column;
+  }
+  .reviews_pagination_creator {
+    margin-left: 22%;
+  }
+  .reviews_pagination_creator a {
+    font-size: 150%;
+  }
+  .event_cancel_btn a {
+    font-size: 100%;
+  }
+  .event_cancel_btn {
+    height: 1.5em;
+    width: 30%;
+  }
+
+}
+@media (max-width:536px) {
+  .support2__3_2 {
+    margin-left: 0;
+  }
+ .div_main_card1 {
+   padding-bottom: 5%;
+ }
+ .event_lookup_buttons_top div>a {
+   font-size: 100%;
+ }
+ .event_cancel_btn a {
+   font-size: 90%;
+ }
+ .event_cancel_btn {
+   height: 1.5em;
+   width: 35%;
+ }
+ .acc_top_1__3_img_del img {
+   height: 50%;
+   width: auto;
+ }
+ .acc_top_1__3_info_del p {
+   font-size: 110%;
+ }
+ .acc_top_1__3_rank_circle {
+   width: 3.5em;
+   height: 3.5em;
+ }
+ .acc_top_1__3_rank_circle a {
+   font-size: 90%;
+   margin-top: 40%;
+ }
+ .acc_top_1__3 {
+   height: 13em;
+ }
+}
+@media (max-width:444px) {
+  .support2__3_2 {
+    margin-left: 0;
+  }
+  .ticket_description p {
+    font-size: 90%;
+  }
+  .ticket_name h2 {
+    font-size: 90%;
+  }
+  .ticket_btn_buy a {
+    font-size: 100%;
+  }
+  .ticket_btn_buy {
+    padding-top: 8%;
+  }
+  .ticket_name {
+    padding-top: 5%;
+  }
+  .div_add_tickets_form_down_input_4 textarea {
+    width: 98.3%;
+  }
+  .acc_top_1__3 {
+    height: 16em;
+  }
+  .acc_top_1__3_img_del img {
+    height: 40%;
+  }
+  .auth_cont {
+    margin-top: 58%;
+  }
+  .auth_cont_reg {
+    margin-top: 58%;
+  }
+  .acc_top_2__3 a {
+    font-size: 110%;
+  }
+  .menu_section a {
+    font-size: 95%;
+  }
+  /* .div_filter_deposite {
+    margin:0;
+  } */
+  .acc_top_1__3_info p {
+    font-size: 105%;
+  }
+  .add_deposite p {
+    font-size: 100%;
+  }
+  .div_add_tickets_form_buttons_left a {
+    font-size: 95%;
+  }
+  .div_add_tickets_form_buttons_right a {
+    font-size: 95%;
+  }
+  .div2_btn_load_more {
+    /* width: 30%; */
+  }
+  .reviews_pagination_creator {
+    margin-left: 8%;
+  }
+  .banner_create_event {
+    font-size: 100%;
+  }
+  .Footer {
+    height: 13em;
+  }
+  .slider_div {
+    height: 20em;
+  }
+   .event_type_div {
+    width: 11em;
+    height: 1.5em;
+    /* margin-top: 1em;
+     margin:auto; */
+  }
+  .event_type_div_all {
+    margin:auto;
+  }
+  .age_div {
+    height: 1.5em;
+    width: 11em;
+    /* margin-top: 1em; */
+    margin: 1em auto auto auto;
+  }
+  .date_picker_div {
+    height: 1.5em;
+    margin:1em auto auto auto ;
+  }
+  .date_picker {
+    width: 10.8em;
+  }
+  .main_filter {
+    flex-direction: column;
+    height: 9em;
+  }
+  .footer_middleside_nav {
+    font-size: 90%;
+  }
+  .reviews_pagination a  {
+    font-size: 160%;
+  }
+  .event_lookup_img_main {
+    height: 15em;
+  }
+  .event_lookup_img_under {
+    height: 6em;
+  }
+  /* .event_lookup_description {
+    font-size: 80%;
+  } */
+  .event_about_icons {
+    font-size: 70%;
+  }
+  .event_about_icons img {
+    height: 78%;
+  }
+  /* .event_lookup_icons_description2 i:nth-child(2) {
+    margin-top: 1em;
+  } */
+  .organisator_img img {
+    width: 6em;
+    height: 6em;
+  }
+  .organisator_form {
+    height: 7em;
+    width: 80%;
+  }
+  .organisator_form a {
+    font-size: 140%;
+  }
+  .review_form p {
+    font-size: 100%;
+  }
+  .review_form {
+    height: 8em;
+  }
+  .review_form_accinfo a {
+    font-size: 90%;
+  }
+  .ticket_return_button_bottom div{
+    width: 9em;
+    height: 2em;
+  }
+  .ticket_return_button_bottom_btn a  {
+     font-size: 120%;
+  }
+  /* .reviews_btn_left_comment {
+    width: 9em;
+    height: 2em; */
+  }
+  /* .reviews_btn_left_comment a {
+    font-size: 120%;
+  } */
+  .map_ret {
+    height: 20em;
+  }
+  /* .ticket_description p {
+    font-size: 88%;
+  } */
+  /* .ticket_btn_buy a {
+    font-size: 100%;
+  } */
+  /* .event_about_h1 h1 {
+    font-size: 110%;
+  } */
+  /* .ticket_name h2 {
+    font-size: 100%;
+  } */
+  .div_buy_ticket1 {
+    height: 5em;
+  }
+  .div_buy_ticket2 {
+    height: 5em;
+  }
+  /* .div_short_desc h2 {
+    font-size: 110%;
+  } */
+  /* .div_short_desc p {
+    font-size: 110%;
+  } */
+  /* .event_location h2 {
+    font-size: 110%;
+  } */
+  .ticket_name  {
+      /* padding-top: 5%; */
+    font-size: 100%;
+    /* margin-top: 30%; */
+  }
+  .ticket_btn_buy {
+    font-size: 100%;
+    /* padding-top: 8%; */
+  }
+  /* .support1__3_2 {
+    margin-left: 35%;
+  } */
+  /* .support2__3_2 {
+    margin-left: 45%;
+  } */
+  /* .support1__3 a {
+    font-size: 95%;
+  } */
+  /* .support2__3 a {
+    font-size: 95%;
+  } */
+  .support3__3_div_icons {
+    font-size: 70%;
+  }
+  .date_picker_my_tickets {
+    margin-top: 0;
+  }
+  .answer_btn a {
+    font-size: 100%;
+  }
+  .answer_btn {
+    height: 1em;
+  }
+  .event_cancel_btn {
+    height: 1.5em;
+    width: 50%;
+  }
+  .event_lookup_buttons_bottom div {
+    width: 8.5em;
+    height: 2em;
+  }
+  .event_lookup_buttons_bottom div>a {
+    font-size: 110%;
+  }
+  .contacts_main {
+    flex-direction: column;
+  }
+  .contacts_main_left {
+    width: 100%;
+    margin-top: 0.5em;
+  }
+  .contacts_main_right {
+    width: 100%;
+    margin-top: 0.5em;
+  }
+  .div_add_comboes {
+    flex-direction: column;
+  }
+  .div_add_type label {
+    margin-top: 4%;
+  }
+  .div_add_date label {
+    margin-top: 4%;
+  }
+  .div_add_comboes_1 select {
+    width: 39%;
+  }
+  .div_add_comboes_2 input {
+    width: 17.5%;
+  }
+
+  

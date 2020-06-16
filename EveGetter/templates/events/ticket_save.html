@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Купить билет{% endblock %}
+{% block breadcrumbs %}
+{% for i in ticket_id %}
+<li><a href="" class="bread_current">{{i.event.event_type}}</a></li>
+<li class="bread_active"><a href="{% url 'event-detail' i.event.id %}" class="bread_active">{{ i.event.name }}</a></li>
+<li class="bread_current"><a href="" class="bread_current">{{ i.ticket_name }}</a></li>
+{% endfor %}
+{% endblock %}
+{% block content %}
+<h1>Подтвердите покупку билета</h1>
+<form action="" method="POST">
+    {% csrf_token %}
+    {% for i in ticket_id %}
+    <div class="ticketBuySave">
+      <div class="ticketBuySaveName">
+        <h2>{{ i.ticket_name }}</h2>
+      </div>
+      <div class="ticketBuySaveDesc">
+        <p>
+          {{ i.description }}
+        </p>
+      </div>
+      <div class="ticketBuySavePrice">
+        <p>{{ i.price }} &#x20bd;</p>
+      </div>
+      <div class="ticketBuySaveCount">
+        {{ form.count }}
+      </div>
+      <div class="tBs_sub">
+        <button type="submit">Подтвердить</button>
+      </div>
+    </div>
+  <!-- <div class="div_buy_ticket1">
+    <div class="ticket_name">      
+      <h2>{{i.ticket_name}}</h2>
+    </div>
+    <div class="ticket_description">
+      <p>{{i.description}}</p>
+    </div>
+    <div>
+      <h6>{{i.price}}</h6>
+    </div>
+    <div class="ticket_btn_buy">
+        {{form.count}}
+      <button type="submit">Подтвердить</button>
+      <a href="{% url 'saveticket' i.pk %}">Купить</a>
+    </div>
+  </div> -->
+  {% endfor %}
+  </form> 
+{% endblock %}

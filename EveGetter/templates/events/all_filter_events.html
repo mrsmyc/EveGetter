@@ -1,0 +1,110 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Мероприятия{% endblock %}
+{% block content %}
+<div>
+    <h1 class="h1style" >Все события</h1>
+</div>
+<section class="section_filter">
+    <div class="main_filter">
+        <div class="event_type_div">
+        <select class="event_type_filter"  >
+            <option>Концерты</option>
+            <option>Мастер-классы</option>
+            <option>Спорт</option>
+            <option>Театр</option>
+            <option>Выставки</option>
+        </select>
+        </div>
+        <div class="age_div">
+        <select class="age_filter">
+            <option>18+ лет</option>
+            <option>14+ лет</option>
+            <option>7+ лет</option>
+            <option>3+ лет</option>
+        </select>
+        </div>
+        <div class="date_picker_div">
+        <input class="date_picker" type="text" name="daterange" value="01/01/2018 - 01/15/2018" />  
+        <script src="{% static 'js/script.js' %}"></script>         
+        </div>
+    </div>
+</section>
+<section>
+<div class="main_cards_mrg">
+{% if all_allowed_events_list %}
+<div class="main_cards" id="main_cards">
+    {% for a in all_allowed_events_list %}
+    <div class="div_main_card1" id="div_main_card1">
+      <div class="main_card_img">
+        <!-- <img src="{{a.image_set.all.0.url}}" alt=""> -->
+        <div class="card_img">
+          {% with a.images_set.all.0 as ph1%}
+            <img src="{{ph1.image.url}}" alt="">
+          {% endwith %}
+        </div>
+        <div class="main_card_div_action">
+          <div class="main_card_div_action_price">
+          <span class="">{{a.ticket_set.all.0.price}}&#8381;</span>
+          </div>
+          <div class="main_card_div_action_buy">
+          <a href="{% url 'event-detail' a.id %}" class="main_card_btn_buy">Купить</a>
+          </div>
+        </div>
+      </div>
+      <div class="main_card_name">
+        <a class="name_links" href="{% url 'event-detail' a.id %}">{{a.name}}</a>
+      </div>
+      <div class="main_card_date_place">
+        <a class="main_card_date_place_links" href="#">{{a.date}}, {{a.city}}</a>
+      </div>
+    </div>                                    
+    {% endfor %} 
+</div>            
+{% endif %}
+</div>
+<div class="reviews_pagination_all">
+    <div class="reviews_pagination_creator">
+        <nav id="pagination">
+            <ul class="pagination justify-content-center">
+                {% if all_allowed_events_list.has_previous %}
+                    <li class="page-item">
+                        <a href="{{ request.path }}?page={{ all_allowed_events_list.previous_page_number }}" class="page-link">&laquo;</a>
+                    </li>
+                {% else %}
+                    <li class="page-item disabled">
+                        <a href="#" class="page-link" tabindex="-1" aria-disabled="true">&laquo;</a>
+                    </li>
+                {% endif %}
+                {% if all_allowed_events_list.paginator.count > all_allowed_events_list.paginator.page_range%}
+                <li class="page-item disabled">
+                  <a href="#" class="page-link disabled" aria-disabled="true">1</a>
+                </li>            
+                {% else %}
+                {% for i in all_allowed_events_list.paginator.page_range %}
+                    {% if all_allowed_events_list.number == 1 %}
+                        <li class="page-item ">
+                            <a href="{{ request.path }}?page={{ i }}" class="page-link">{{ i }}</a>
+                        </li>
+                    {% else %}
+                    <li class="page-item">
+                        <a href="{{ request.path }}?page={{ i }}" class="page-link">{{ i }}</a>
+                    </li>
+                    {% endif %}
+                {% endfor %}
+                {% if all_allowed_events_list.has_next %}
+                    <li class="page-item">
+                        <a href="{{ request.path }}?page={{ all_allowed_events_list.next_page_number }}" class="page-link">&raquo;</a>
+                    </li>
+                {% else %}
+                    <li class="page-item disabled">
+                        <a href="#" class="page-link disabled" tabindex="-1" aria-disabled="true">&raquo;</a>
+                    </li>
+                {% endif %}
+                {% endif %}            
+            </ul>
+        </nav>
+    </div>
+</div>
+</section>  
+{% endblock %}

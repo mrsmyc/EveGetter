@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Купить билет{% endblock %}
+{% block breadcrumbs %}
+{% for i in ticket_id %}
+<li><a href="" class="bread_current">{{i.event.event_type}}</a></li>
+<li class="bread_active"><a href="{% url 'event-detail' i.event.id %}" class="bread_active">{{ i.event.name }}</a></li>
+<li class="bread_current"><a href="" class="bread_current">{{ i.ticket_name }}</a></li>
+{% endfor %}
+{% endblock %}
+{% block content %}
+<h1>Подарите билет</h1>
+<form action="" method="POST">
+    {% csrf_token %}
+    {% for i in ticket_id %}
+    <div class="ticketBuySave">
+      <div class="ticketBuySaveName">
+        <h2>{{ i.ticket_name }}</h2>
+      </div>
+      <div class="ticketBuySaveDesc">
+        <p>
+          {{ i.description }}
+        </p>
+      </div>
+      <div class="ticketBuySavePrice">
+        <p>{{ i.price }} &#x20bd;</p>
+      </div>
+      <div class="ticketBuySaveCount">
+        {{ form.count }}
+      </div>
+      <div class="ticketGiftSaveOwner">
+          {{ form.ticket_owner }}
+      </div>
+      <div class="tBs_sub">
+        <button type="submit">Подтвердить</button>
+      </div>
+    </div>
+  {% endfor %}
+  </form> 
+
+{% endblock %}

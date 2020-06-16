@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Профиль{% endblock %}
+{% block breadcrumbs %}
+  <li><a href="" class="bread_current">{{user.first_name}} {{user.second_name}}</a></li>
+{% endblock %}
+{% block content %}
+<div class="acc_top_1__3">
+    <div class="acc_top_1__3_img">
+      <img src=" {{ user.user_avatar.url }} " >
+      <!-- <a href="#">Изменить фото</a> -->
+    </div>
+    <div class="acc_top_1__3_info">
+      <p>{{user.first_name}} {{user.second_name}}</p>
+      <!-- <p>{{request.user}}</p> -->
+      <p>{{user.email}}</p>
+      <p>{{user.profile_status}}</p>
+    </div>
+    <div class="acc_top_1__3_rank">
+      <div class="acc_top_1__3_rank_circle">
+        <a href="#">10/10</a>
+      </div>
+    </div>
+  </div>
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Редактировать профиль{% endblock %}
+{% block content %}
+<h1>Ваши данные</h1>
+    <form action="" method="POST" enctype="multipart/form-data">
+        <div class="div_change_user_info">
+                {% csrf_token %}
+                <h3>Имя</h3>
+                {{u_form.first_name}}
+                <h3>Фамилия</h3>
+                {{u_form.second_name}}
+                <h3>Почта</h3>
+                {{u_form.email}}
+                <h3>День рождения</h3>
+                {{u_form.birth_date}}
+                <h3>Пол</h3>
+                {{u_form.sex}}
+                <h3>Страна</h3>
+                {{u_form.country}}
+                <h3>Город</h3>
+                {{u_form.city}}
+                <h3>Описание профиля</h3>
+                {{u_form.profile_status}}
+                <h3>Фото</h3>         
+            {{u_form.user_avatar}}
+            <button type="submit" class="">Сохранить</button>
+        </div>
+    </form>    
+{% endblock %}

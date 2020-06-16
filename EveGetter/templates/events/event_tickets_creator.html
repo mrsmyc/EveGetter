@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Билеты{% endblock %}
+{% block breadcrumbs %}
+<li><a href="{% url 'acclook' %}" class="bread_active">{{request.user.first_name}} {{request.user.second_name}}</a></li>
+<li><a href="{% url 'myevents' %}" class="bread_active">Мои мероприятия</a></li>
+<li><a href="" class="bread_current">{{AllEventTickets.first.event.name}}</a></li>
+{% endblock %}
+{% block content %}
+<h1>Билеты мероприятия {{event.name}}</h1>
+{% for i in AllEventTickets %}
+<div>
+    <div class="ticketBuy">
+        <div>
+          <h2>{{i.ticket_name}}</h2>
+        </div>
+        <div class="ticketDescription">
+          <p >{{i.description}}</p>        
+        </div>
+        <div class="ticketPrice">
+          <p>{{i.price}} &#x20bd</p>        
+        </div>
+        <div>
+            <p>Всего билетов: {{i.amount}}</p>
+        </div>
+        <div>
+            <p>
+                Осталось билетов: {{i.amount_left}}
+            </p>
+        </div>
+        <div class="ticketBuyA">
+          <a href="{% url 'tickets-redact' i.id %}">Редактировать</a>
+        </div>
+      </div>
+</div>
+{% endfor %}
+<div class="div_add_ticket_1">
+  <div class="div_add_ticket_2">
+    <a href="{% url 'create-tickets' event.id %}">Создать билет</a>
+  </div>
+</div>
+{% endblock %}
+

@@ -1,0 +1,33 @@
+{% load el_pagination_tags %}
+{% paginate latest_events_list %}
+{% for a in latest_events_list %}
+<div class="div_main_card1" id="div_main_card1">
+  <div class="main_card_img">
+    <!-- <img src="{{a.image_set.all.0.url}}" alt=""> -->
+    <div class="card_img">
+      {% with a.images_set.all.0 as ph1%}
+        <img src="{{ph1.image.url}}" alt="">
+      {% endwith %}
+    </div>
+    <div class="main_card_div_action">
+      <div class="main_card_div_action_price">
+      <span class="">
+        {{a.ticket_set.all.0.price}}
+        <!-- 1200 -->
+        &#8381;</span>
+      </div>
+      <div class="main_card_div_action_buy">
+      <a href="{% url 'event-detail' a.id %}" class="main_card_btn_buy">Подробнее</a>
+      </div>
+    </div>
+  </div>
+  <div class="main_card_name">
+    <a class="name_links" href="{% url 'event-detail' a.id %}">{{a.name}}</a>
+  </div>
+  <div class="main_card_date_place">
+    <a class="main_card_date_place_links" href="#">{{a.date}}, {{a.city}}</a>
+  </div>
+</div>                                    
+{% endfor %} 
+{% show_more "Показать еще" %}
+

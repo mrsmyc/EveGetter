@@ -1,0 +1,95 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Купить билет{% endblock %}
+{% block breadcrumbs %}
+<li><a href="" class="bread_current">{{object.event_type}}</a></li>
+<li class="bread_active"><a href="" class="bread_active"></a>{{object.name}}</li>
+<li class="bread_current"><a href="" class="bread_current"></a>Покупка билета</li>
+{% endblock %}
+{% block content %}
+<!-- <nav>
+    <div class="breadcrumbs">
+      <ul class="breadcrumb">
+        <li><a href="#" class="bread_active">Иркутск</a></li>
+        <li><a href="#"class="bread_active">Концерты</a></li>
+        <li><a href="#" class="bread_active">Выступление великолепного эминема на оскаре</a></li>
+        <li><a href="#" class="bread_current">Покупка билета</a></li>
+      </ul>
+    </div>
+</nav> -->
+<div class="event_lookup_images">
+  <div class="event_lookup_img_main">
+    {% with object.images_set.all.0 as ph1%}
+      <img src="{{ph1.image.url}}" alt="">
+     {% endwith %}
+  </div>
+</div>
+<div class="about_h1_icons">
+  <div class=event_about_h1>
+  <h1>{{object.name}}</h1>
+  </div>
+  <div class="event_about_icons">
+  <i data-title="В черном" class="fas fa-tshirt"></i>
+  <i data-title="Возможны внутренние траты" class="fas fa-wallet"></i>
+  <div data-title="От 18 лет" class="icon18"><img data-title="От 18 лет" src="18+icon.png" alt="" class="icon18"></div>
+  <!-- <i data-title="От 18 лет" class="icon18">&#128286</i> -->
+  <i data-title="Мероприятие для мужского пола" class="fas fa-mars"></i>
+  <i data-title="Мероприятие для женского пола"  class="fas fa-venus"></i>
+  </div>
+</div>
+<div class="div_buy_ticket">
+  <!-- <form action="" method="POST"> -->
+    <!-- {% csrf_token %} -->
+    {% for i in object.ticket_set.all %}
+    <div class="ticketBuy">
+      <div>
+        <h2>{{i.ticket_name}}</h2>
+      </div>
+      <div class="ticketDescription">
+        <p >{{i.description}}</p>        
+      </div>
+      <div class="ticketPrice">
+        <p>{{i.price}} &#x20bd</p>        
+      </div>
+      <div class="ticketBuyA">
+        <a href="{% url 'saveticket' i.pk %}">Купить</a>
+      </div>
+    </div>
+  <!-- <div class="div_buy_ticket1">
+    <div class="ticket_name">      
+      <h2>{{i.ticket_name}}</h2>
+    </div>
+    <div class="ticket_description">
+      <p>{{i.description}}</p>
+    </div>
+    <div>
+      <h6>{{i.price}}</h6>
+    </div>
+    <div class="ticket_btn_buy">
+       <button type="submit">Купить</button> -->
+      <!-- <a href="{% url 'saveticket' i.pk %}">Купить</a>
+    </div>
+  </div>  -->
+  {% endfor %}
+  <!-- </form>  -->
+</div>
+<div class="div_short_desc">
+  <h2>Описание</h2>
+  <p>{{object.short_description}}</p>
+</div>
+<div class="event_location">
+  <div class="">
+    <h2>Местоположение</h2>
+  </div>
+  <div class="event_location_current">
+    <a href="#">{{object.event_adress}}</a>
+  </div>
+  <div class="event_location_map">
+    <iframe class="map_ret" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1220.2201423012712!2d104.27862075025364!3d52.28986274662763!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5da824cbaf46e3ff%3A0x9ebf7e93e0129ad4!2z0YPQuy4g0JvQtdC90LjQvdCwLCAxLCDQmNGA0LrRg9GC0YHQuiwg0JjRgNC60YPRgtGB0LrQsNGPINC-0LHQuy4sIDY2NDAyNw!5e0!3m2!1sru!2sru!4v1582023621740!5m2!1sru!2sru" width="1200" height="550" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+  </div>
+</div>
+<div class="banner_create_event">
+  <a>Создайте свое мероприятие вместе с нами</a>
+</div>
+
+{% endblock %}

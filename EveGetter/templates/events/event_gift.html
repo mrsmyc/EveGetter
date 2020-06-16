@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Подарить билет{% endblock %}
+{% block content %}
+        <div>
+    <h1 class="h1_ma">Подарите билет</h1>
+        </div>
+        <div class="">
+            <form action="" method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="gift_submit">
+                    <h3>Выберите пользователя</h3>
+                    {{form.ticket_owner}}
+                </div>
+                <div>
+                    <button type="submit">Подарить</button>
+                </div>
+            </form>
+        </div>
+     
+{% endblock %}

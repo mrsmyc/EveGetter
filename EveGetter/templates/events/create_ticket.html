@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Создать мероприятие {% endblock %}
+{% block content %}
+    <h1>Создайте билеты для мероприятия</h1>
+    <div class="j_center">
+        <div class="ticket_2 d_flex flex_column ticket_create_2">
+            <div class="ticket_2_name ticket_create_2">
+                <label for="">Введите название</label>
+                <input type="text" name="" id="">
+            </div>
+            <div class="d_flex flex_column ticket_create_2">
+                <label for="">Количество</label>
+                <input type="number" name="" id="">
+            </div>
+            <div class="d_flex flex_column ticket_create_2">
+                <label for="">Цена</label>
+                <input type="number" name="" id="">
+            </div>
+            <div class="d_flex flex_column ticket_create_2">
+                <label for="">Описание</label>
+                <textarea name="" id="" cols="30" rows="10"></textarea>
+                <!-- <input type="text" name="" id=""> -->
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}

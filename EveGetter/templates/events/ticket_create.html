@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Создать мероприятие {% endblock %}
+{% block content %}
+<form action="" method="POST">
+  {% csrf_token %}
+  <div class="add_tickets">
+    <label class="label_font" class="add_tickets_label_main" for="">Добавьте билеты</label>
+    <div class="div_add_tickets">
+      <div class="div_add_tickets_form">
+        <div class="div_add_tickets_form_up">
+          <div class="div_add_tickets_form_up_1">
+            <div class="">
+              <label for="">Название</label>
+            </div>
+            <div class="div_add_tickets_form_down_input_1">
+              {{form.ticket_name}}
+              <!-- <input type="text" name="" value=""> -->
+            </div>
+          </div>
+          <div class="div_add_tickets_form_up_2">
+            <div class="">
+              <label for="">Количество</label>
+            </div>
+            <div class="div_add_tickets_form_down_input_2">
+              {{form.amount}}
+              <!-- <input class="" min="0" type="number" name="" value="0"> -->
+            </div>
+          </div>
+          <div class="div_add_tickets_form_up_3">
+            <div class="">
+              <label for="">Цена</label>
+            </div>
+            <div class="div_add_tickets_form_down_input_3">
+              {{form.price}}
+              <!-- <input class="" min="0" type="number" name="" value="0"> -->
+            </div>
+          </div>
+          <div class="div_add_tickets_form_up_4">
+            <div class="">
+              <label class="label_font" for="">Описание</label>
+            </div>
+            <div class="div_add_tickets_form_down_input_4">
+              {{form.description}}
+              <!-- <textarea name="name" rows="8" cols="80"></textarea> -->
+              <!-- {{form.event}} -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="div_add_tickets_form_buttons">
+        <div class="div_add_tickets_form_buttons_left">
+          <a href="#">Удалить</a>
+        </div>
+        <div class="div_add_tickets_form_buttons_right div_add_tickets_form_buttons_active">
+          <a href="#">Добавить</a>
+        </div>
+      </div>
+    </div>
+    <div>
+      <button type="submit"> Сохранить билеты </button>
+    </div>
+</div>
+</form>
+
+{% endblock %}

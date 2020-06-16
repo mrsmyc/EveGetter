@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="{% static 'css/normalize.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/newcss.css' %}">
+<script src="https://kit.fontawesome.com/20e77e6026.js" crossorigin="anonymous"></script>  
+<title>Войти</title>
+</head>
+<body>
+<div class="main_container">
+    <div class="auth_cont auth_cont_reg">
+        <form method="POST" action="">
+            {% csrf_token %}
+            <div class="auth_input_top">
+                <div class="auth_input_top_inner">
+                    {{form.phone}}
+                    <!-- <input class="auth_login_input" type="text" name="" value="" placeholder="Введите телефон"> -->
+                    <!-- <input class="auth_password_input" type="password" name="" value="" placeholder="Введите пароль"> -->
+                    {{form.password1}}
+                    {{form.password2}}
+                </div>
+                </div>
+                <div class="auth_input_bottom">
+                <div class="auth_input_bottom_inner">
+                    <div class="auth_input_bottom_inner_btn auth_input_bottom_inner_btn_reg">
+                    <button type="submit" class="reg_button">Зарегистрироваться</button>
+                        <!-- <a href="#">Зарегистрироваться</a> -->
+                    </div>
+                    
+                    {{form.errors}}
+
+                    <div class="auth_input_bottom_inner_icons">
+                    <a href="#" class="links_vk links"><i class="fab fa-vk"></i></a>
+                    <a href="#" class="links_facebook links"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="links_instagram links"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                </div>
+        </form>
+    </div>
+    </div>
+</body>
+</html>

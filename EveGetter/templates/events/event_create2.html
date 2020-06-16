@@ -1,0 +1,108 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Создать мероприятие {% endblock %}
+{% block breadcrumbs %}
+    <li><a href="{% url 'acclook' %}" class="bread_active">{{request.user.first_name}} {{request.user.second_name}}</a></li>
+    <li><a href="{% url 'myevents' %}" class="bread_active">Мои мероприятия</a></li>
+    <li><a href="" class="bread_current">{{event_id.name}}</a></li>
+{% endblock %}
+{% block content %}
+        <div>
+    <h1 class="h1_ma">Создайте свое мероприятие</h1>
+        </div>
+        <div class="event_create_wrapper">
+            <form action="" method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="event_create_wrapper2">
+                    <div class="event_create_div">
+                        <label for="lbl_name">Название мероприятия</label>
+                         {{form.name}}
+                    </div>
+                    <div class="event_create_div">
+                        <label for="lbl_desc">Описание мероприятия</label>
+                         {{form.description}}
+                    </div>
+                    <div class="event_create_div">
+                        <label for="lbl_sh_desc">Краткое описание мероприятия</label>
+                         {{form.short_description}}
+                    </div>
+                    <div class="event_create_div">
+                        <label for="lbl_type">Выберите тип мероприятия</label>
+                         {{form.event_type}}
+                    </div>
+                    <div class="event_create_div">
+                        <label for="lbl_date">Укажите дату проведения мероприятия</label>
+                         {{form.date}}
+                    </div>
+                    <div class="event_create_div">
+                        <label for="lbl_time">Укажите время проведения мероприятия</label>
+                         {{form.time}}
+                    </div>
+                    <div class="event_create_div">
+                        <label for="lbl_dur">Укажите продолжительность мероприятия</label>
+                         {{form.duration}}
+                    </div>
+                    <div class="event_create_div">
+                        <h3>Выберите дополнительные опции</h3>
+                        <div class="event_create_div border_up">
+                            <label for="lbl_dress">Дресс-код</label>
+                            {{form.if_dresscode}}
+                            {{form.dresscodevalue}}
+                        </div>
+                        <div class="event_create_div">
+                            <label for="lbl_age">Возрастные ограничения</label>
+                            {{form.if_age}}
+                            <span>От:</span>{{form.age_start}}
+                            <span>До:</span>{{form.age_end}}
+                        </div>
+                        <div class="event_create_div">
+                            <label for="lbl_gend">Гендерные ограничения</label>
+                            {{form.if_gender}}   
+                            {{form.sex}}
+                        </div>
+                        <div class="event_create_div">
+                            <label for="lbl_spend">Внутренние траты</label>
+                            {{form.insidespendings}}
+                        </div>
+                    </div>
+                    <div class="event_create_div">
+                        <label for="lbl_ctry">Укажите страну</label>
+                        {{form.country}}
+                    </div>
+                    <div class="event_create_div">
+                        <label for="lbl_city">Укажите город</label>
+                        {{form.city}}
+                    </div>
+                    <div class="event_create_div">
+                        <label for="lbl_adress">Укажите адрес</label>
+                        {{form.event_adress}}
+                    </div>
+                    <div class="event_create_div">
+                        <label for="">Добавьте фотографии</label>
+                        {{formset.as_p}}
+                        <!-- {{formset2.as_p}} -->
+                    </div>
+                    <div class="event_create_div_btn">
+                        <button>Отмена</button>
+                        <button type="submit">Сохранить</button>
+                    </div>
+                </div>
+                <!-- Проверка на валидность формы, надо удалить потом -->
+                {% if form.errors %}
+    {% for field in form %}
+        {% for error in field.errors %}
+            <div class="alert alert-danger">
+                <strong>{{ error|escape }}</strong>
+            </div>
+        {% endfor %}
+    {% endfor %}
+    {% for error in form.non_field_errors %}
+        <div class="alert alert-danger">
+            <strong>{{ error|escape }}</strong>
+        </div>
+    {% endfor %}
+{% endif %}
+            </form>
+        </div>
+     
+{% endblock %}

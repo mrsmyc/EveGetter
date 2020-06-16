@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Профиль{% endblock %}
+{% block breadcrumbs %}
+  <li><a href="" class="bread_current">{{request.user.first_name}} {{request.user.second_name}}</a></li>
+{% endblock %}
+{% block content %}
+      <div class="menu_section">
+        <a href="{% url 'mytickets' %}">Мои билеты</a>
+        <a href="{% url 'myevents' %}">Мои мероприятия</a>
+        <a href="#">Помощь</a>
+        <a href="{% url 'logout' %}">Выйти</a>
+      </div>
+      <div class="acc_top_1__3">
+        <div class="acc_top_1__3_img">
+          <img src=" {{ request.user.user_avatar.url }} " >
+          <!-- <a href="#">Изменить фото</a> -->
+        </div>
+        <div class="acc_top_1__3_info">
+          <p>{{request.user.first_name}} {{request.user.second_name}}</p>
+          <p>{{request.user}}</p>
+          <p>{{request.user.email}}</p>
+        </div>
+        <div class="acc_top_1__3_rank">
+          <div class="acc_top_1__3_rank_circle">
+            <a href="#">10/10</a>
+          </div>
+        </div>
+      </div>
+      <div>
+      </div>
+      <div class="hidden">
+        <form action="" method="POST" class = "popup_pass" id="form">
+          {% csrf_token %}
+          {{ form.as_p }}
+          <button type="submit">Сохранить</button>
+        </form>
+      </div>
+      <div class="acc_top_2__3">
+        <!-- <a href="#" class="change_info ">Изменить персональную информацию</a> -->
+        <a href="{% url 'updateuser' %}">Редактировать профиль</a>
+        <a href="#form" class="change_pass popup">Сменить пароль</a>
+        <!-- <a href="#" class="add_que">Добавить контрольный вопрос</a> -->
+        <!-- <a href="#" class="change_numb">Сменить номер телефона</a> -->
+      </div>
+{% endblock %}

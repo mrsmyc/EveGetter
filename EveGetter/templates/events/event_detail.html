@@ -1,0 +1,288 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Мероприятие{% endblock %}
+{% block content %}
+
+    <nav>
+        <div class="breadcrumbs">
+            <ul class="breadcrumb">
+            <li><a href="#" class="bread_active">Иркутск</a></li>
+            <li><a href="#"class="bread_active">Концерты</a></li>
+            <li><a href="#" class="bread_current">Выступление великолепного эминема на оскаре</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="event_lookup_images">       
+        <div class="event_lookup_img_main">
+            {% with object.images_set.all.0 as ph1%}
+                <img src="{{ph1.image.url}}" alt="">
+            {% endwith %}
+        </div>
+        <div class="event_lookup_img_notmain">
+        <div class="event_lookup_img_under">
+            {% with object.images_set.all.1 as ph2%}
+                <img src="{{ph2.image.url}}" alt="">
+            {% endwith %}            
+        </div>
+        <div class="event_lookup_img_under">
+            {% with object.images_set.all.2 as ph3%}
+                <img src="{{ph3.image.url}}" alt="">
+            {% endwith %}   
+        </div>
+        <div class="event_lookup_img_under">
+            {% with object.images_set.all.3 as ph4%}
+                <img src="{{ph4.image.url}}" alt="">
+            {% endwith %}   
+        </div>
+        </div>
+    </div>
+    <div class="event_lookup_about">
+        <div class="about_h1_icons">
+        <div class=event_about_h1>
+        <h1>{{object.name}}</h1>
+        </div>
+        <div class="event_about_icons">
+        {% if object.if_dresscode %}
+        <i data-title="{{object.dresscodevalue}}" class="fas fa-tshirt"></i>
+        {% endif %}
+        {% if object.insidespendings %}
+        <i data-title="Возможны внутренние траты" class="fas fa-wallet"></i>
+        {% endif %}
+        {% if object.if_age %}
+        <div data-title="От {{object.age_start}} лет" class="icon18"><img data-title="От 18 лет" src="18+icon.png" alt="" class="icon18"></div>
+        <!-- <i data-title="От 18 лет" class="icon18">&#128286</i> -->
+        {% endif %}
+        {% if object.if_gender %}
+        <i data-title="Мероприятие для мужского пола" class="fas fa-mars"></i>
+        <i data-title="Мероприятие для женского пола" class="fas fa-venus"></i>
+        {% endif %}
+        </div>
+        </div>
+        <div class="event_lookup_buttons_bottom">
+        <div class="event_lookup_btn_buy_bottom">
+        <a  href="{% url 'event-tickets-buy' object.id %}">Купить билет</a>
+        </div>
+        <div class="event_lookup_btn_gift_bottom">
+        <a  href="#">Подарить билет</a>
+        </div>
+        </div>
+        <div class="event_lookup_description">
+        <div class="">
+            <h2>О мероприятии</h2>
+        </div>
+        <div class="">
+            <p>{{object.description}}</p>
+        </div>
+        <div class="event_lookup_icons_description">
+            <div class="event_lookup_icons_description1">
+            {% if object.if_dresscode %}
+            <i class="fas fa-tshirt"><span class="event_lookup_icons_description_font">{{object.dresscodevalue}}</span></i>
+            {% endif %}
+            {% if object.insidespendings %}
+            <i class="fas fa-wallet"><span>Возможны внутренние денежные траты</span></i>
+            {% endif %}
+            </div>
+            <!-- <i class="icon18">&#128286 </i> -->
+            <div class="event_lookup_icons_description2">
+            {% if object.if_gender %}            
+            <i class="fas fa-mars"><span>Мероприятие для мужского пола</span></i>
+            <i class="fas fa-venus"><span>Мероприятие доя женского пола</span></i>
+            {% endif%}
+            </div>
+        </div>
+        </div>
+        <div class="event_lookup_organisation">
+        <h2>Организатор мероприятия</h2>
+        <div class="organisator_form">
+            <div class="organisator_img">
+            <img src="{{object.event_creator.user_avatar.url}}" alt="">
+            </div>
+            <div class="organisator_name">
+            <a href="#">{{object.event_creator.first_name}} {{object.event_creator.second_name}}</a>
+            </div>
+        </div>
+        </div>
+        <div class="event_location">
+        <div class="">
+            <h2>Местоположение</h2>
+        </div>
+        <div class="event_location_current">
+            <a href="#">{{object.event_adress}}</a>
+        </div>
+        <div class="event_location_map">
+            <iframe class="map_ret" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1220.2201423012712!2d104.27862075025364!3d52.28986274662763!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5da824cbaf46e3ff%3A0x9ebf7e93e0129ad4!2z0YPQuy4g0JvQtdC90LjQvdCwLCAxLCDQmNGA0LrRg9GC0YHQuiwg0JjRgNC60YPRgtGB0LrQsNGPINC-0LHQuy4sIDY2NDAyNw!5e0!3m2!1sru!2sru!4v1582023621740!5m2!1sru!2sru" width="1200" height="550" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+        </div>
+        </div>
+        <div class="stars">
+        <h2>Оцените мероприятие</h2>
+        <div class="rating rating2"><!--
+            --><a href="#5" title="Give 5 stars">★</a><!--
+            --><a href="#4" title="Give 4 stars">★</a><!--
+            --><a href="#3" title="Give 3 stars">★</a><!--
+            --><a href="#2" title="Give 2 stars">★</a><!--
+            --><a href="#1" title="Give 1 star">★</a>
+        </div>
+        </div>
+        <div class="event_lookup_reviews">
+        <div class="reviews_h2">
+            <h2>Отзывы</h2>
+        </div>
+        <div class="reviews_btn_comment">
+            <div class="reviews_btn_left_comment">
+            <a href="#">Оставить отзыв</a>
+            </div>
+        </div>
+        <div class="reviews">
+            <div class="review_form">
+            <div class="review_form_accinfo">
+                <img src="default.jpg" alt="">
+                <a href="#">Скворцов Арсений</a>
+            </div>
+            <div class="review_sam">
+                <div class="review_is">
+                <p>Все было супер, мне понравилось!</p>
+                </div>
+                <div class="answer">
+                <p>Спасибо, стараемся!</p>
+                </div>
+            </div>
+            </div>
+            <div class="review_form review_form2">
+            <div class="review_form_accinfo">
+                <img src="default.jpg" alt="">
+                <a href="#">Скворцов Арсений</a>
+            </div>
+            <div class="review_sam">
+                <div class="review_is">
+                <p>Все было супер, мне понравилось!</p>
+                </div>
+                <div class="answer">
+                <p>Спасибо, стараемся!</p>
+                </div>
+            </div>
+            </div>
+        </div>
+        <div class="reviews_pagination">
+            <a href="#">«</a>
+            <a href="#">1</a>
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">4</a>
+            <a href="#">5</a>
+            <a href="#">6</a>
+            <a href="#">»</a>
+        </div>
+        </div>
+        <div class="event_lookup_buttons_bottom">
+        <div class="event_lookup_btn_buy_bottom">
+        <a  href="#">Купить билет</a>
+        </div>
+        <div class="event_lookup_btn_gift_bottom">
+        <a  href="#">Подарить билет</a>
+        </div>
+        </div>
+        <div class="simillar_events">
+        <h2>Похожие события</h2>
+        <div class="div_expected_cards div_expected_cards_ret">
+            <div class="div_expected_cards_line_1">
+            <div class="div_main_card1 div_main_card1_return">
+                <div class="main_card_img">
+                    <div class="main_card_div_action">
+                    <div class="main_card_div_action_price">
+                    <span class="">1200р.</span>
+                    </div>
+                    <div class="main_card_div_action_buy">
+                    <a href="#" class="main_card_btn_buy">Купить</a>
+                    </div>
+                    </div>
+                </div>
+                <div class="main_card_name">
+                    <a class="name_links" href="#">Выступление великолепного эминема на оскаре</a>
+                </div>
+                <div class="main_card_date_place">
+                    <a class="main_card_date_place_links" href="#">21.05.2021, Москва</a>
+                </div>
+            </div>
+            <div class="div_main_card1 div_main_card1_return">
+                <div class="main_card_img">
+                <div class="main_card_div_action">
+                    <div class="main_card_div_action_price">
+                    <span class="">1200р.</span>
+                    </div>
+                    <div class="main_card_div_action_buy">
+                    <a href="#" class="main_card_btn_buy">Купить</a>
+                    </div>
+                </div>
+                </div>
+                <div class="main_card_name">
+                <a class="name_links" href="#">Выступление великолепного эминема на оскаре</a>
+                </div>
+                <div class="main_card_date_place">
+                <a class="main_card_date_place_links" href="#">21.05.2021, Москва</a>
+                </div>
+            </div>
+            <div class="div_main_card1 div_main_card1_900 div_main_card1_return">
+                <div class="main_card_img">
+                <div class="main_card_div_action">
+                    <div class="main_card_div_action_price">
+                    <span class="">1200р.</span>
+                    </div>
+                    <div class="main_card_div_action_buy">
+                    <a href="#" class="main_card_btn_buy">Купить</a>
+                    </div>
+                </div>
+                </div>
+                <div class="main_card_name">
+                <a class="name_links" href="#">Выступление великолепного эминема на оскаре</a>
+                </div>
+                <div class="main_card_date_place">
+                <a class="main_card_date_place_links" href="#">21.05.2021, Москва</a>
+                </div>
+            </div>
+            </div>
+            <div class="div_expected_cards_line_2">
+            <div class="div_main_card1 div_main_card1_sim div_main_card1_return">
+                <div class="main_card_img">
+                    <div class="main_card_div_action">
+                    <div class="main_card_div_action_price">
+                    <span class="">1200р.</span>
+                    </div>
+                    <div class="main_card_div_action_buy">
+                    <a href="#" class="main_card_btn_buy">Купить</a>
+                    </div>
+                    </div>
+                </div>
+                <div class="main_card_name">
+                    <a class="name_links" href="#">Выступление великолепного эминема на оскаре</a>
+                </div>
+                <div class="main_card_date_place">
+                    <a class="main_card_date_place_links" href="#">21.05.2021, Москва</a>
+                </div>
+            </div>
+            <div class="div_main_card1 div_main_card1_sim div_main_card1_return">
+                <div class="main_card_img">
+                    <div class="main_card_div_action">
+                    <div class="main_card_div_action_price">
+                    <span class="">1200р.</span>
+                    </div>
+                    <div class="main_card_div_action_buy">
+                    <a href="#" class="main_card_btn_buy">Купить</a>
+                    </div>
+                    </div>
+                </div>
+                <div class="main_card_name">
+                    <a class="name_links" href="#">Выступление великолепного эминема на оскаре</a>
+                </div>
+                <div class="main_card_date_place">
+                    <a class="main_card_date_place_links" href="#">21.05.2021, Москва</a>
+                </div>
+            </div>
+            </div>
+
+        </div>
+        <div class="banner_create_event">
+        <a>Создайте свое мероприятие вместе с нами</a>
+        </div>
+    </div>
+
+{% endblock %}

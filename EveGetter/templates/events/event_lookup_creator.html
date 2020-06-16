@@ -1,0 +1,230 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Подробнее{% endblock %}
+{% block breadcrumbs %}
+<li><a href="{% url 'acclook' %}" class="bread_active">{{request.user.first_name}} {{request.user.second_name}}</a></li>
+<li><a href="{% url 'myevents' %}" class="bread_active">Мои мероприятия</a></li>
+<li><a href="" class="bread_current">{{event_detail.name}}</a></li>
+{% endblock %}
+{% block content %}
+
+<div class="event_lookup_images">       
+    <div class="event_lookup_img_main">
+        {% with event_detail.images_set.all.0 as ph1%}
+            <img src="{{ph1.image.url}}" alt="">
+        {% endwith %}
+    </div>
+    <div class="event_lookup_img_notmain">
+    <div class="event_lookup_img_under">
+        {% with event_detail.images_set.all.1 as ph2%}
+            <img src="{{ph2.image.url}}" alt="">
+        {% endwith %}            
+    </div>
+    <div class="event_lookup_img_under">
+        {% with event_detail.images_set.all.2 as ph3%}
+            <img src="{{ph3.image.url}}" alt="">
+        {% endwith %}   
+    </div>
+    <div class="event_lookup_img_under">
+        {% with event_detail.images_set.all.3 as ph4%}
+            <img src="{{ph4.image.url}}" alt="">
+        {% endwith %}   
+    </div>
+    </div>
+</div>
+<div class="event_lookup_about">
+  <div class="about_h1_icons">
+    <div class=event_about_h1>
+    <h1 class="h1style">{{event_detail.name}}</h1>
+    </div>
+    <div class="event_about_icons">
+        {% if event_detail.if_dresscode %}
+        <i data-title="{{event_detail.dresscodevalue}}" class="fas fa-tshirt"></i>
+        {% endif %}
+        {% if event_detail.insidespendings %}
+        <i data-title="Возможны внутренние траты" class="fas fa-wallet"></i>
+        {% endif %}
+        {% if event_detail.if_age %}
+        <div data-title="От {{event_detail.age_start}} лет" class="icon18"><img data-title="От 18 лет" src="18+icon.png" alt="" class="icon18"></div>
+        <!-- <i data-title="От 18 лет" class="icon18">&#128286</i> -->
+        {% endif %}
+        {% if event_detail.if_gender == 1 %}
+        <i data-title="Мероприятие для мужского пола" class="fas fa-mars"></i>
+        {% endif %}
+        {% if event_detail.if_gender == 2 %}                    
+        <i data-title="Мероприятие для женского пола" class="fas fa-venus"></i>
+        {% endif %}
+        </div>
+  </div>
+  <div class="event_lookup_buttons_top">
+    <div class="event_lookup_creator_redact">
+    <a  href="{% url 'event-redact' event_detail.id %}">Редактировать</a>
+    </div>
+    <div class="event_lookup_creator_report" >
+    <a  href="{% url 'event-creator-report' event_detail.id %}">Отчет</a>
+    </div>
+    <div class="event_lookup_creator_deposite">
+        {% if event_detail.deposit == True %}
+            <a  href="#" class="inactive">Депозит внесен</a>
+        {% else %}
+            <a href="#">Внести депозит</a>
+        {% endif %}
+    </div>
+  </div>
+  <div class="event_lookup_description">
+    <div class="">
+      <h2>Описание</h2>
+    </div>
+    <div class="">
+      <p>{{event_detail.description}}</p>
+    </div>
+    <div class="">
+        <h2>Краткое описание</h2>
+    </div>
+    <div class="">
+        <p>{{event_detail.short_description}}</p>
+    </div>
+    <div class="">
+        <h2>Дата проведения</h2>
+    </div>
+    <div class="">
+        <p>{{event_detail.date}}</p>
+    </div>
+    <div class="">
+        <h2>Время проведения</h2>
+    </div>
+    <div class="">
+        <p>{{event_detail.time}}</p>
+    </div>
+    <div class="">
+        <h2>Продолжительность</h2>
+    </div>
+    <div class="">
+        <p>{{event_detail.duration}}</p>
+    </div>
+    <div class="event_lookup_icons_description">
+        <div class="event_lookup_icons_description1">
+        {% if event_detail.if_dresscode %}
+        <i class="fas fa-tshirt"><span class="event_lookup_icons_description_font">{{event_detail.dresscodevalue}}</span></i>
+        {% endif %}
+        {% if event_detail.insidespendings %}
+        <i class="fas fa-wallet"><span>Возможны внутренние денежные траты</span></i>
+        {% endif %}
+        </div>
+        <!-- <i class="icon18">&#128286 </i> -->
+        <div class="event_lookup_icons_description2">
+        {% if event_detail.if_gender == 1 %}            
+        <i class="fas fa-mars"><span>Мероприятие для мужского пола</span></i>
+        {% endif%}
+        {% if event_detail.if_gender == 2 %}            
+        <i class="fas fa-venus"><span>Мероприятие доя женского пола</span></i>
+        {% endif%}
+        </div>
+    </div>
+  </div>
+  <div class="event_lookup_organisation">
+    <h2>Организатор мероприятия</h2>
+    <div class="organisator_form">
+        <div class="organisator_img">
+        <img src="{{event_detail.event_creator.user_avatar.url}}" alt="">
+        </div>
+        <div class="organisator_name">
+        <a href="#">{{event_detail.event_creator.first_name}} {{event_detail.event_creator.second_name}}</a>
+        </div>
+    </div>
+  </div>
+  <div class="event_location">
+    <div class="">
+      <h2>Страна</h2>
+    </div>
+    <div class="event_location_current">
+      <a href="#">{{event_detail.country}}</a>
+    </div>
+    <div class="">
+        <h2>Город</h2>
+    </div>
+    <div class="event_location_current">
+        <a href="#">{{event_detail.city}}</a>
+    </div>
+    <div class="">
+        <h2>Адрес</h2>
+    </div>
+    <div class="event_location_current">
+        <a href="#">{{event_detail.event_adress}}</a>
+    </div>
+    <div class="event_location_map">
+      <iframe class="map_ret" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1220.2201423012712!2d104.27862075025364!3d52.28986274662763!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5da824cbaf46e3ff%3A0x9ebf7e93e0129ad4!2z0YPQuy4g0JvQtdC90LjQvdCwLCAxLCDQmNGA0LrRg9GC0YHQuiwg0JjRgNC60YPRgtGB0LrQsNGPINC-0LHQuy4sIDY2NDAyNw!5e0!3m2!1sru!2sru!4v1582023621740!5m2!1sru!2sru" width="1200" height="550" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+    </div>
+  </div>
+  <div class="event_lookup_reviews">
+    <div class="reviews_h2">
+        <h2>Отзывы</h2>
+    </div>
+    {% if comments %}
+    <div class="reviews" id="reviews_div">
+        {% for comment in comments %}
+        <div class="review_form">
+        <div class="review_form_accinfo">
+            <img src="{{ comment.user.user_avatar.url }}" alt="">
+            <a href="#">{{comment.user.first_name}} {{comment.user.second_name}}</a>
+        </div>
+        <div class="review_sam">
+            <div class="review_is">
+                <p>{{comment.text}}</p>
+            <!-- <p>Все было супер, мне понравилось!</p> -->
+            </div>
+            <!-- <div class="answer">
+            <p>Спасибо, стараемся!</p>
+            </div> -->
+        </div>
+        </div>
+        {% endfor %}            
+    </div>
+    <div class="reviews_pagination_all">
+        <div class="reviews_pagination_creator">
+            <nav id="pagination_comments_1">
+                <ul class="pagination justify-content-center">
+                    {% if comments.has_previous %}
+                        <li class="page-item">
+                            <a href="{{ request.path }}?page={{ comments.previous_page_number }}" class="page-link">&laquo;</a>
+                        </li>
+                    {% else %}
+                        <li class="page-item disabled">
+                            <a href="#" class="page-link" tabindex="-1" aria-disabled="true">&laquo;</a>
+                        </li>
+                    {% endif %}
+                    {% if comments.paginator.count > comments.paginator.page_range%}
+                    <li class="page-item disabled">
+                      <a href="#" class="page-link disabled" aria-disabled="true">1</a>
+                    </li>            
+                    {% else %}
+                    {% for i in comments.paginator.page_range %}
+                        {% if comments.number == 1 %}
+                            <li class="page-item ">
+                                <a href="{{ request.path }}?page={{ i }}" class="page-link">{{ i }}</a>
+                            </li>
+                        {% else %}
+                        <li class="page-item">
+                            <a href="{{ request.path }}?page={{ i }}" class="page-link">{{ i }}</a>
+                        </li>
+                        {% endif %}
+                    {% endfor %}
+                    {% if comments.has_next %}
+                        <li class="page-item">
+                            <a href="{{ request.path }}?page={{ comments.next_page_number }}" class="page-link">&raquo;</a>
+                        </li>
+                    {% else %}
+                        <li class="page-item disabled">
+                            <a href="#" class="page-link disabled" tabindex="-1" aria-disabled="true">&raquo;</a>
+                        </li>
+                    {% endif %}
+                    {% endif %}            
+                </ul>
+            </nav>
+        </div>
+    </div>
+    {% else %}
+    <h2>Отзывов нет</h2>
+    {% endif %}
+    </div>
+{% endblock %}

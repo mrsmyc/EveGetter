@@ -1,0 +1,47 @@
+{% if user_events %}      
+      <div class="my_tickets_cards_top">
+        {% for a in user_events %}
+        <div class="div_main_card1 div_my_tickets_cards">
+            <div class="main_card_img">
+              <div class="card_img">
+                {% with a.images_set.all.0 as ph1%}
+                  <img src="{{ph1.image.url}}" alt="">
+                {% endwith %}
+              </div>
+              <div class="main_card_img_info ">
+                <div class="">
+                  <a href="#">{{a.ticket_set.all.0.price}}₽</a>
+                </div>
+                <div class="">
+                  <a href="{% url 'event-creator-detail' a.id %}">Подробнее</a>
+                </div>
+                <div class="">
+                {% if a.if_ticket_created == False %}
+                  <a href="{% url 'create-tickets' a.id %}">Создать билеты</a>
+                {% else %}
+                <a href="{% url 'event-all-tickets' a.id %}">Билеты</a>
+                {% endif %}
+                </div>
+              </div>
+            </div>
+            <div class="main_card_name">
+              <a class="name_links" href="{% url 'event-detail' a.id %}">{{a.name}}</a> 
+            </div>
+            <div class="main_card_date_place_2">
+              <a class="main_card_date_place_links" href="#">{{a.date}}, {{a.city}}</a>
+            </div>
+            {% if a.moderation.id == 1 %}
+            <div class="moder_div_events">
+              <span class="red_font_span">На модерации</span>
+            </div>            
+            {% else %}
+            <div class="moder_div_events">
+              <span class="green_font_span">Модерация пройдена</span>
+            </div>
+            {% endif %}
+        </div>
+        {% endfor %}
+      </div>
+      {% else %}
+      <h1>У вас еще нет мероприятий</h1>
+      {% endif %}

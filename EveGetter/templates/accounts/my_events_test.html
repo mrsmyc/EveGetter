@@ -1,0 +1,91 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Мои мероприятия{% endblock %}
+{% block breadcrumbs %}
+  <li><a href="{% url 'acclook' %}" class="bread_active">{{request.user.first_name}} {{request.user.second_name}}</a></li>
+  <li><a href="" class="bread_current">Мои мероприятия</a></li>
+{% endblock %}
+{% block content %}
+      <section class="section_filter">
+        <div class="main_filter_my_tickets ">
+          <div class="event_type_div event_type_div_my_tickets event_type_div_my_events">
+            <select class="event_type_filter"  >
+              <option selected disabled hidden>Статус</option>
+              <option>Предстоит</option>
+              <option>Завершено</option>
+            </select>
+          </div>
+          <div class="event_type_div event_type_div_my_tickets div_filter_deposite">
+            <select class="event_type_filter"  >
+              <option selected disabled hidden>Депозит</option>
+              <option>Внесен</option>
+              <option>Не внесен</option>
+            </select>
+          </div>
+          <div class="date_picker_div date_picker_div_my_tickets">
+            <input class="date_picker date_picker_my_tickets" type="text" name="daterange" value="01/01/2018 - 01/15/2018" />
+            <script src="script.js"></script>
+          </div>
+          <div class = "TicketsSearch">
+            <form class="TicketsForm">
+              <input class="Ticketsinput" id="user-input" type="text" placeholder="Search" aria-label="Search">
+              <i id="search-icon"></i>
+              <!-- <button class="searchbutton searchbutton_my_tickets" id="search-icon" type="submit"></button> -->
+            <form>
+          </div>
+        </div>
+      </section>
+      <div class="my_events_cards">
+        <h2>Мои мероприятия</h2>
+      </div>
+      <div id="replaceable-content">
+        {% include 'my_event_test_display.html' %}
+      </div>
+      <div class="reviews_pagination_all">
+        <div class="reviews_pagination_creator">
+            <nav id="pagination">
+                <ul class="pagination justify-content-center">
+                    {% if user_events.has_previous %}
+                        <li class="page-item">
+                            <a href="{{ request.path }}?page={{ user_events.previous_page_number }}" class="page-link">&laquo;</a>
+                        </li>
+                    {% else %}
+                        <li class="page-item disabled">
+                            <a href="#" class="page-link" tabindex="-1" aria-disabled="true">&laquo;</a>
+                        </li>
+                    {% endif %}
+                    {% if user_events.paginator.count > user_events.paginator.page_range%}
+                    <li class="page-item disabled">
+                      <a href="#" class="page-link disabled" aria-disabled="true">1</a>
+                    </li>            
+                    {% else %}
+                    {% for i in user_events.paginator.page_range %}
+                        {% if user_tuser_eventsickets.number == 1 %}
+                            <li class="page-item ">
+                                <a href="{{ request.path }}?page={{ i }}" class="page-link">{{ i }}</a>
+                            </li>
+                        {% else %}
+                        <li class="page-item">
+                            <a href="{{ request.path }}?page={{ i }}" class="page-link">{{ i }}</a>
+                        </li>
+                        {% endif %}
+                    {% endfor %}
+                    {% if user_events.has_next %}
+                        <li class="page-item">
+                            <a href="{{ request.path }}?page={{ user_events.next_page_number }}" class="page-link">&raquo;</a>
+                        </li>
+                    {% else %}
+                        <li class="page-item disabled">
+                            <a href="#" class="page-link disabled" tabindex="-1" aria-disabled="true">&raquo;</a>
+                        </li>
+                    {% endif %}
+                    {% endif %}            
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <div class="event_create">
+      <a href="{% url 'createEvent' %}">Создать мероприятие</a>
+    </div>
+    {% endblock %}
+
